@@ -1,0 +1,105 @@
+name: hatecheck_AB_r1
+description: >
+  HATECHECK, ABSTRACT-ONLY ABLATION at 2/2/0. Replicate 1 of three.
+  Definitions and guidelines at the frozen budgets, no retrieved examples.
+  Completes the six-arm decomposition: zero_shot, few_shot, rag,
+  guidelines_only 0/2/0, definitions_only 2/0/0, examples_only 0/0/5, and now
+  abstract_only 2/2/0.
+
+  THIS IS A DIRECT REPLICATION OF SQ1's abstract_only ARM at the same
+  2/2/0 budget. On 2026-08-23 that arm scored 0.332 hate_type macro against
+  zero_shot 0.336 on en_dev_eval_sq3_types, a null, and that null is one third
+  of SQ1's headline decomposition (rag - zero_shot = +0.021 = -0.004 abstract
+  + 0.025 examples). Running the identical budget on a different dimension, a
+  different corpus and 8x the n is a replication that can fail.
+
+  MEASURED BEFORE THIS RUN, all on the common 3,705-item set, three replicates
+  each, floors from the widest arm in each comparison.
+
+  GATE, non-hateful false-positive rate against zero_shot 0.1867:
+    examples_only    -0.0511  6.59x  bootstrap CI [-0.0725, -0.0296]
+    rag              -0.0479  6.96x  CI [-0.0706, -0.0270]
+    few_shot         -0.0138  0.84x  CI contains zero
+    definitions_only -0.0046  0.67x  CI contains zero
+    guidelines_only  +0.0000  0.00x  CI contains zero
+  Additivity of the three kinds HOLDS on the gate in all four blocks
+  (residual 0.33x to 0.55x of the widest floor).
+
+  TARGET_GROUP, hateful side, macro against zero_shot 0.9396:
+    definitions_only +0.0324  9.54x  complete separation
+    rag              +0.0249  7.13x  complete separation
+    guidelines_only  -0.0064  2.76x  complete separation
+    examples_only    -0.0168  7.19x  complete separation
+    few_shot         -0.0248  8.78x  complete separation
+  Additivity FAILS here at 4.49x, driven by sexual_orientation, where
+  definitions add +0.177 and examples subtract -0.067 against zero_shot 0.780.
+
+  PRE-REGISTERED.
+
+  A1. GATE. abstract_only - zero_shot on the non-hateful FP rate is NULL,
+      because its two components are 0.67x and 0.00x separately and additivity
+      holds on this dimension. Predicted magnitude below one floor.
+      FALSIFIED by a delta clearing both the floor and a templ_id-clustered
+      paired bootstrap. This is the SQ1 replication: a null here reproduces
+      SQ1's abstract_only result on a new dimension, a new corpus and 8x the n.
+
+  A2. TARGET_GROUP. abstract_only - zero_shot is POSITIVE and lands near
+      +0.026, the sum of its components (+0.0324 - 0.0064). If it lands near
+      the definitions-only figure of +0.0324 instead, guidelines are inert
+      rather than harmful when definitions are also present, and the -0.0064
+      guidelines effect is conditional on their being alone.
+      FALSIFIED by a null or a negative delta.
+
+  A3. THE UNCOVERED BLOCK, n=344, where no guideline in the knowledge base
+      applies. examples_only - rag there is -0.0136 at 1.56x floor with CI
+      [-0.0286, -0.0022] excluding zero, i.e. REMOVING the abstract buckets
+      from the full configuration reduces false positives. That measurement
+      bundles definitions with guidelines. A3 predicts abstract_only -
+      zero_shot is POSITIVE on this block, which attributes the harm directly
+      rather than inferring it from a removal.
+      FALSIFIED by a null or negative delta, which would mean the removal
+      effect comes from something other than the abstract content.
+
+  A4. SCHEMA REPAIRS. definitions_only - zero_shot is +0.0385 repairs per item
+      at 7.1x floor with complete separation, and guidelines_only - zero_shot
+      is -0.0070, inside the floor. A4 predicts abstract_only carries the
+      definition penalty, landing above zero_shot's 0.1475 and near
+      definitions_only's 0.1860.
+
+  A CORRECTION IS RECORDED IN THE LOG FOR THIS BATCH. On 2026-08-27 a
+  guidelines_only - zero_shot delta of +0.0116 on the uncovered block was
+  reported as confirming a pre-registered prediction. It cleared its floor at
+  1.33x with complete separation and its clustered bootstrap CI contained
+  zero, so it is withdrawn. Both tests are required and neither substitutes
+  for the other. Third instance in this project.
+
+  THIS ARM STAMPS arm: "rag" because the manipulation is a retrieval budget
+  rather than a prompt context. Source maps key on (stem, arm) pairs, same as
+  kinds_*, defprop_*, hatecheck_G_*, hatecheck_D_* and hatecheck_E_*. NOT at
+  the frozen config and MUST NOT be pooled with hatecheck_A_*.
+
+  ARMS MUST STAY [rag]. run_slice1 constructs Arms with k_examples read from
+  config.yaml while the Retriever gets the merged manifest config, so a
+  few_shot arm here would receive 5 static examples under a manifest that
+  says 0. Known unfixed defect, avoided by construction.
+subset: en_hatecheck_eval
+arms: [rag]
+provider: peasec
+pinned_model: Qwen/Qwen3-VL-32B-Instruct
+temperature: 1.0
+allow_fallback: false
+n_votes: 3
+workers: 8
+gate_mapping: strict
+retrieval:
+  strategy: hybrid
+  k_definitions: 2
+  k_definitions_mode: flat
+  k_guidelines: 2
+  k_examples: 0
+  k_examples_feedback: 0
+  use_mmr: true
+  mmr_lambda: 0.7
+  mmr_pool_factor: 3
+  use_reranker: false
+  rrf_k: 60

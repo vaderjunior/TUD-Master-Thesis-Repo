@@ -1,0 +1,178 @@
+{
+  "rag": {
+    "gate": {
+      "strict": {
+        "macro_f1": 0.21465968586387432,
+        "mapping": "strict",
+        "per_class": {
+          "hate": {
+            "precision": 0.2733333333333333,
+            "recall": 1.0,
+            "f1": 0.42931937172774864,
+            "tp": 41,
+            "fp": 109,
+            "fn": 0
+          },
+          "not_hate": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "tp": 0,
+            "fp": 0,
+            "fn": 109
+          }
+        },
+        "tp": 41,
+        "fp": 109,
+        "fn": 0,
+        "tn": 0,
+        "per_source": {
+          "detox": {
+            "n": 72,
+            "benign": 63,
+            "hateful": 9,
+            "fp": 63,
+            "fn": 0,
+            "fp_rate": 1.0,
+            "fn_rate": 0.0
+          },
+          "gahd": {
+            "n": 78,
+            "benign": 46,
+            "hateful": 32,
+            "fp": 46,
+            "fn": 0,
+            "fp_rate": 1.0,
+            "fn_rate": 0.0
+          }
+        },
+        "n_scored": 150,
+        "n_unscored": 0,
+        "n_uncertain": 0,
+        "macro_f1_confident_only": null,
+        "note": null
+      }
+    },
+    "target_group": {
+      "dimension": "target_group",
+      "macro_f1": null,
+      "micro_f1": 0.0,
+      "per_label": {
+        "gender": {
+          "label": "gender",
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 0,
+          "predicted": 9,
+          "tp": 0,
+          "fp": 9,
+          "fn": 0,
+          "averaged": false
+        },
+        "religion": {
+          "label": "religion",
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 1,
+          "predicted": 0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 1,
+          "averaged": false
+        }
+      },
+      "labels_averaged": [],
+      "labels_excluded": [
+        "gender",
+        "religion"
+      ],
+      "n_items": 9,
+      "n_unscored": 0,
+      "subset_accuracy": 0.0,
+      "hamming_loss": 0.5555555555555556,
+      "extra": {
+        "mean_gold_labels": 0.1111111111111111,
+        "mean_pred_labels": 1.0,
+        "any_overlap_rate": 0.0,
+        "gold_subset_of_pred": 0.8888888888888888
+      }
+    },
+    "hate_type": {
+      "dimension": "hate_type",
+      "macro_f1": null,
+      "micro_f1": 0.0,
+      "per_label": {},
+      "labels_averaged": [],
+      "labels_excluded": [],
+      "n_items": 0,
+      "n_unscored": 0,
+      "subset_accuracy": 0.0,
+      "hamming_loss": 0.0,
+      "extra": {}
+    },
+    "legal": {
+      "dimension": "legal",
+      "macro_f1": null,
+      "micro_f1": 0.0,
+      "per_label": {},
+      "labels_averaged": [],
+      "labels_excluded": [],
+      "n_items": 0,
+      "n_unscored": 0,
+      "subset_accuracy": 0.0,
+      "hamming_loss": 0.0,
+      "extra": {}
+    },
+    "severity": {
+      "dimension": "severity",
+      "macro_f1": null,
+      "micro_f1": 0.0,
+      "per_label": {},
+      "labels_averaged": [],
+      "labels_excluded": [],
+      "n_items": 0,
+      "n_unscored": 0,
+      "subset_accuracy": 0.0,
+      "hamming_loss": 0.0,
+      "extra": {}
+    },
+    "calibration": {
+      "ece": 0.7266666666666667,
+      "bins": {
+        "1.0": {
+          "n": 150,
+          "accuracy": 0.2733333333333333,
+          "confidence": 1.0
+        }
+      },
+      "n": 150,
+      "note": "vote share proxy; n_votes=3 gives 2-3 distinct values"
+    },
+    "honesty": {
+      "n_items": 150,
+      "total_runs": 450,
+      "parse_failures": 0,
+      "parse_failure_rate": 0.0,
+      "repairs": 0,
+      "normalisations": 0,
+      "gate_normalised": 0,
+      "uncertain": 0,
+      "no_prediction": 0,
+      "mean_latency_s": 0.0,
+      "workers": [
+        8
+      ],
+      "models": {
+        "mock": 150
+      },
+      "kb_versions": [
+        "b3e1a021777f7b85"
+      ],
+      "prompt_versions": [
+        "classify_v1-8e588db7"
+      ]
+    }
+  }
+}

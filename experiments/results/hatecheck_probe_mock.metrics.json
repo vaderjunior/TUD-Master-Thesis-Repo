@@ -1,0 +1,221 @@
+{
+  "rag": {
+    "gate": {
+      "strict": {
+        "macro_f1": 0.4074074074074074,
+        "mapping": "strict",
+        "per_class": {
+          "hate": {
+            "precision": 0.6875,
+            "recall": 1.0,
+            "f1": 0.8148148148148148,
+            "tp": 2563,
+            "fp": 1165,
+            "fn": 0
+          },
+          "not_hate": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "tp": 0,
+            "fp": 0,
+            "fn": 1165
+          }
+        },
+        "tp": 2563,
+        "fp": 1165,
+        "fn": 0,
+        "tn": 0,
+        "per_source": {
+          "hatecheck": {
+            "n": 3728,
+            "benign": 1165,
+            "hateful": 2563,
+            "fp": 1165,
+            "fn": 0,
+            "fp_rate": 1.0,
+            "fn_rate": 0.0
+          }
+        },
+        "n_scored": 3728,
+        "n_unscored": 0,
+        "n_uncertain": 0,
+        "macro_f1_confident_only": null,
+        "note": null
+      }
+    },
+    "target_group": {
+      "dimension": "target_group",
+      "macro_f1": 0.07389411883793906,
+      "micro_f1": 0.28482247366367536,
+      "per_label": {
+        "disability": {
+          "label": "disability",
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 373,
+          "predicted": 0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 373,
+          "averaged": true
+        },
+        "gender": {
+          "label": "gender",
+          "precision": 0.28482247366367536,
+          "recall": 1.0,
+          "f1": 0.44336471302763436,
+          "support": 730,
+          "predicted": 2563,
+          "tp": 730,
+          "fp": 1833,
+          "fn": 0,
+          "averaged": true
+        },
+        "national_origin": {
+          "label": "national_origin",
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 357,
+          "predicted": 0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 357,
+          "averaged": true
+        },
+        "race": {
+          "label": "race",
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 357,
+          "predicted": 0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 357,
+          "averaged": true
+        },
+        "religion": {
+          "label": "religion",
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 373,
+          "predicted": 0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 373,
+          "averaged": true
+        },
+        "sexual_orientation": {
+          "label": "sexual_orientation",
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 373,
+          "predicted": 0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 373,
+          "averaged": true
+        }
+      },
+      "labels_averaged": [
+        "disability",
+        "gender",
+        "national_origin",
+        "race",
+        "religion",
+        "sexual_orientation"
+      ],
+      "labels_excluded": [],
+      "n_items": 2563,
+      "n_unscored": 0,
+      "subset_accuracy": 0.28482247366367536,
+      "hamming_loss": 0.23839250877877488,
+      "extra": {
+        "mean_gold_labels": 1.0,
+        "mean_pred_labels": 1.0,
+        "any_overlap_rate": 0.28482247366367536,
+        "gold_subset_of_pred": 0.28482247366367536
+      }
+    },
+    "hate_type": {
+      "dimension": "hate_type",
+      "macro_f1": null,
+      "micro_f1": 0.0,
+      "per_label": {},
+      "labels_averaged": [],
+      "labels_excluded": [],
+      "n_items": 0,
+      "n_unscored": 0,
+      "subset_accuracy": 0.0,
+      "hamming_loss": 0.0,
+      "extra": {}
+    },
+    "legal": {
+      "dimension": "legal",
+      "macro_f1": null,
+      "micro_f1": 0.0,
+      "per_label": {},
+      "labels_averaged": [],
+      "labels_excluded": [],
+      "n_items": 0,
+      "n_unscored": 0,
+      "subset_accuracy": 0.0,
+      "hamming_loss": 0.0,
+      "extra": {}
+    },
+    "severity": {
+      "dimension": "severity",
+      "macro_f1": null,
+      "micro_f1": 0.0,
+      "per_label": {},
+      "labels_averaged": [],
+      "labels_excluded": [],
+      "n_items": 0,
+      "n_unscored": 0,
+      "subset_accuracy": 0.0,
+      "hamming_loss": 0.0,
+      "extra": {}
+    },
+    "calibration": {
+      "ece": 0.3125,
+      "bins": {
+        "1.0": {
+          "n": 3728,
+          "accuracy": 0.6875,
+          "confidence": 1.0
+        }
+      },
+      "n": 3728,
+      "note": "vote share proxy; n_votes=3 gives 2-3 distinct values"
+    },
+    "honesty": {
+      "n_items": 3728,
+      "total_runs": 11184,
+      "parse_failures": 0,
+      "parse_failure_rate": 0.0,
+      "repairs": 0,
+      "normalisations": 0,
+      "gate_normalised": 0,
+      "uncertain": 0,
+      "no_prediction": 0,
+      "mean_latency_s": 0.0,
+      "workers": [
+        8
+      ],
+      "models": {
+        "mock": 3728
+      },
+      "kb_versions": [
+        "b3e1a021777f7b85"
+      ],
+      "prompt_versions": [
+        "classify_v1-8e588db7"
+      ]
+    }
+  }
+}

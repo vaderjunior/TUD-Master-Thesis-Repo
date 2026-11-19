@@ -1,0 +1,73 @@
+{
+  "base_cache": {
+    "files": {
+      "config.json": "ef0185e2aae6e06c5f105a285006952c340e20c7dbf43c86ec82601b13fc45e9",
+      "merges.txt": "1ce1664773c50f3e0cc8842619a93edc4624525b728b188a9e0be33b7726adc5",
+      "model.safetensors": "5bde1d28afb363d0103324efeb5afc8b2b397fe5e04beabb9b1ef355255ade81",
+      "tokenizer.json": "847bbeab6174d66a88898f729d52fa8d355fafe1bea101cf960dd404581df70e",
+      "tokenizer_config.json": "994f46754c5bf4014f1aa92d34b1374319c3a6b3f702105cd5b742beaecd18ce",
+      "vocab.json": "9e7f63c2d15d666b52e21d250d2e513b87c9b713cfa6987a82ed89e5e6e50655"
+    },
+    "revision": "e2da8e2f811d1448a5b465c236feacd80ffbac7b",
+    "snapshot": "C:\\Users\\ajayt\\.cache\\huggingface\\hub\\models--roberta-base\\snapshots\\e2da8e2f811d1448a5b465c236feacd80ffbac7b"
+  },
+  "created_utc": "2026-10-08T19:12:43.379074+00:00",
+  "environment": {
+    "neural_packages": {
+      "safetensors": "0.8.0",
+      "tokenizers": "0.22.2",
+      "torch": "2.13.0+cu126",
+      "transformers": "5.12.1"
+    },
+    "packages": {
+      "numpy": "2.5.0",
+      "pandas": "3.0.3",
+      "pyarrow": "24.0.0",
+      "scikit-learn": "1.9.0",
+      "scipy": "1.18.0"
+    },
+    "python": "3.13.14"
+  },
+  "features": "Pretrained roberta-base revision pinned by the original base-cache receipt. RobertaModel without pooling layer; no randomly initialized encoder weights accepted. FP32 SDPA, eval mode, max128, historical guarded tokenizer. TF32 disabled. Mean of all nonpadding final hidden states including special tokens, L2 normalized; fixed CLS/L2 sensitivity from same forward pass.",
+  "fitting": "Three original fold seeds for each representation. All selection uses TRAIN only. Core/wider gold read by separate scoring step, not fitting.",
+  "input_count": 19229,
+  "inputs": {
+    "config/taxonomy.yaml": "02dabf77bc27bca61cb4d931429fd7e32046a83fea3ead6f7863420a6417c4c9",
+    "data/processed/en_dev_eval_main.parquet": "14f015e2aed261441ac9ce5830a36b2425d1be01903f854a04e84241a7dea188",
+    "data/processed/en_dev_eval_severity.parquet": "6791cb5b55bbda49c513564b81ecc4c5e56b4edf2fa7602a8b4b3b1867e52554",
+    "data/processed/en_dev_eval_sq3_types.parquet": "b31a8cb28f0f4443bdae5489abc44dc80e43b5e4b308f4534d64ae61b130ffd1",
+    "data/processed/en_dev_eval_targets.parquet": "4aa17c9cbd3661718d14d9244a206d79a9d503d842af0159e924d61be0da9a49",
+    "data/processed/en_dev_eval_types.parquet": "54d5ebaf2731a4bf8d755118dc20ccbb5de3e11bdd9dc118add1b3010bb032a4",
+    "experiments/astra/compact_bge_20261008_v1/plan.json": "f7b9faa99593d80024e6cb5e546544937b351b4134c5646128d0bebaf29aefb8",
+    "experiments/astra/compact_bge_20261008_v1/train.json": "c6334de6408bfa0a5c537c0c7e15723a275387fc91ba7db0b7bfd92f1f6aed7b",
+    "experiments/astra/compact_broad_20261008_v1/plan.json": "93d1221ce24862839e42365c0d9fc9c7686e2e0f9d3b88b5c9dc77e61a174666",
+    "experiments/astra/compact_roberta_probe_20261008_v1/feature_inputs.json": "2b8b98e969a8b201922d75b1356675ca5323bb13355ae7a65da39fa120cc4c46",
+    "experiments/astra/compact_roberta_probe_20261008_v1/scope_mapping.json": "272342268ec15846e9b8374258953357197f814a5cf7a8986690b0ff31d9de06",
+    "experiments/astra/full_kb_core_20260915_v1/dev_inputs.jsonl": "d6c2de6631bf00e4d774961034c63de88b91a5c0ad3267a41734c1990e4ca36c",
+    "experiments/astra/full_kb_core_20260915_v1/encoders_v5/execution.json": "eab30acf96ee40f65ec643d0ab51844a66d85008db8500e1553a634b0c8b17da",
+    "experiments/astra/full_kb_core_20260915_v1/kb/small/records.jsonl": "96fbf0f91e890683c9d2ee7b48160d782471bce150e7f540f5e4771c043552a3",
+    "experiments/astra/offline_closure_20261006_v1/evaluation_preparation/broad_roster.jsonl": "fb1f5f05de39e505dc52fd527de01eecee668c64aec495af7eda957030d9bf02",
+    "models/encoder/full/hate/seed0/tokenizer.json": "374dc8a4fa0c77de6197bf97170e2dfcdd7d10258621d27b9f755d2b33c3bec9",
+    "scratch/analysis/astra_compact_bge_v1.py": "491882ca47fc6886a1905b35d981667bd4be4721eb86f145f571c6bf84150c32",
+    "scratch/analysis/astra_compact_broad_compare_v1.py": "16b8bec4b4271f841c36f5cf46ae29eab86b87ae0babdfcc9cdbb4632627b977",
+    "scratch/analysis/astra_compact_roberta_v1.py": "0ecc2b0808430e51225571dbb93075da86b7a2d4f1ac133588785786d6000da9",
+    "scratch/analysis/astra_core_scoring_v1.py": "c90c5b23f068fccaca46e89d4acae8d3d8083a78b2e4572df9887de06a6a3683",
+    "scratch/analysis/astra_later_scoring_v1.py": "e52755162f6b3ed26b0323046522e05f061c144c553119bb040125f02b8fb90c",
+    "scratch/analysis/astra_linear_common_v1.py": "405b327952b785fd4a59ef6abea449a22a8ccbe209d1a2bee25395d936149337",
+    "scratch/analysis/astra_offline_common_v1.py": "ed3ce8ff02b93b78ab767db96fd08490eb4efacd5d1ab97ad797d6873ee50255",
+    "scratch/analysis/astra_roberta_tokenizer_v1.py": "f9d326043c35782367a4a08048d1681a503076fcdc07d258664ba3c5a949de3b",
+    "scratch/analysis/test_astra_compact_roberta_v1.py": "2afd769d437a6d9ddfa0a94759513fd860dbb44aaac4710244b65439d7105dd5",
+    "scripts/astra_run_compact_gpu_v1.ps1": "0f0d887dbdcb99a1808376feada49c09e0d3708ef9e6501bc1022776a27c10ed"
+  },
+  "limitations": "Original BGE and prior diagnostics already exposed DEV and later BGE absolute results. Wider TEST/HateCheck also have prior exposure. No untouched-data claim.",
+  "model_comparison": "Same 147 permitted English labels, original shared TRAIN folds, balanced logistic learner, C/cutoff grids, gating and refit procedure as compact BGE. This compares representation packages; dimensions, pretraining and pooling differ. It does not isolate pretraining objective or repair the original fine-tuned RoBERTa.",
+  "pooling_policy": "Mean is primary, CLS supporting; no best-pooling choice from evaluation outcomes.",
+  "runtime": "CPU-only small preflight. Explicit run requires CUDA; 256-input durable NPZ chunks, microbatch32. Compare saved neutral CPU probes to CUDA within absolute1e-4 before extraction; norm tolerance2e-4. Replayed/completed chunks stay authoritative.",
+  "scope_counts": {
+    "broad": 18275,
+    "core": 970,
+    "train": 147
+  },
+  "statistics": "Core and broad frozen-representation comparisons descriptive initially; publish all six fits, same populations and supported labels. No new superiority p-values or selected main system.",
+  "status": "frozen_before_representation_extraction"
+}

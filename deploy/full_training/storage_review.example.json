@@ -1,0 +1,6 @@
+{
+  "checked_utc": "REPLACE_WITH_CURRENT_UTC_TIME",
+  "image_build_log_upper_bytes": null,
+  "other_project_upper_bytes": null,
+  "evidence": "Describe the checked image/cache/log sizes or conservative upper bounds. Do not guess."
+}

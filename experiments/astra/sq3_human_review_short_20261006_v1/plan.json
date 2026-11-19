@@ -1,0 +1,28 @@
+{
+  "created_utc": "2026-10-06T17:21:16.401385+00:00",
+  "human_judgments_collected": 0,
+  "inputs": {
+    "experiments/astra/sq3_additions_20261004_v1/annotation_review/PROTOCOL.md": "c719bb48d3e15cf79b01ad6bec18dbea7b3748a7d45c1ee50bb7d83d34adc943",
+    "experiments/astra/sq3_additions_20261004_v1/annotation_review/distribution_literal_v2/reviewer_A/project_form.md": "e8655bcb863fc2b0eb0158ddeaf700bc5f1a8b0ad7e3aa1d6566aef0a0aa5a59",
+    "experiments/astra/sq3_additions_20261004_v1/annotation_review/distribution_literal_v2/reviewer_A/source_form.md": "0fdc819da98fd529a7eb4e66236bc9573d6a0574b732fdf20cdd05b78321442b",
+    "experiments/astra/sq3_additions_20261004_v1/annotation_review/distribution_literal_v2/reviewer_B/project_form.md": "508a61757c0e18e9075f994e9692cd9d3454e9e09872b570e932ebfa518efec8",
+    "experiments/astra/sq3_additions_20261004_v1/annotation_review/distribution_literal_v2/reviewer_B/source_form.md": "9b8ba12b4f056f272f13c696ef0fa8b63eea686bb1272c643c18bef29a6cfa98",
+    "experiments/astra/sq3_additions_20261004_v1/annotation_review/plan.json": "ea90616745ed7e7440afe4a51abc539912cadd363417c012286fe75fff8bb469",
+    "experiments/astra/sq3_additions_20261004_v1/annotation_review/researcher_only/concealed_key.jsonl": "b06902172feb149f6ac4d912b5fb7d59863e2b17f2eaddd0e12f4c1108d4480c",
+    "experiments/astra/sq3_human_review_short_20261006_v1/PROTOCOL.md": "3c651fd30a054ad9568526d7a4503be0f4a4bf3d667ac38c667084806e7c1577",
+    "scratch/analysis/astra_human_review_short_prepare_v1.py": "5da0a09a64980cd9672ef541ad6c2b744fcbf075b3e09b6ef252096e5c48636b"
+  },
+  "items_per_original_stratum": 8,
+  "judgments_per_reviewer": 48,
+  "passes_per_reviewer": 2,
+  "reviewers": 2,
+  "selection_seed": 202610043,
+  "status": "shortening_frozen_before_subset_selection",
+  "texts": 24,
+  "time_target_minutes_total": [
+    20,
+    30
+  ],
+  "timing_verified": false,
+  "user_confirmed_neither_reviewer_started": true
+}

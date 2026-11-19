@@ -1,0 +1,23 @@
+{
+  "created_utc": "2026-10-01T06:44:08.734718+00:00",
+  "fallback": "unchanged plain source in both specific and generic arms; no source/pool replacement",
+  "history": "Assistant already saw old aggregate/case evidence and inspected source packet; not independent blind human annotation.",
+  "inputs": {
+    "experiments/astra/sq3_explanation_authoring_20261001_v1/AUTHORING_PROTOCOL.md": "c8d8396658b39fd7aaf4563b939c2ebab1db7915c5608d1a6b88acce73b581df",
+    "experiments/astra/sq3_explanation_authoring_20261001_v1/generic_templates_v1.json": "14d9ad3254e5aa8e354dff7b32b3ee23c5ceb2a6e5239a1e96ae654c2c120829",
+    "experiments/astra/sq3_weekend_preparation_20261001_v2/explanation_label_definitions.json": "6e3690f7e5d0d7487a5597d3afe20b5479b2111fd1c7138b667fb5cdba0c8633",
+    "experiments/astra/sq3_weekend_preparation_20261001_v2/explanation_source_packet.jsonl": "db41b5c27a5a24c867332515fe1671e69b0baf4112f9a0579c1c9cb388bb2d5a",
+    "experiments/astra/sq3_weekend_preparation_20261001_v2/independent_check.json": "6b7107214e1377f5a2075577eff98690566919f4499dcbf150ee0fdf696aec7f",
+    "experiments/astra/sq3_weekend_preparation_20261001_v2/source_memberships.json": "fd23e974659eaf796f68b25bde9a81f61f9401e597502d70438bd12eb5f5bb83"
+  },
+  "live_protocol_ready": false,
+  "max_word_difference": 8,
+  "model_calls": 0,
+  "primary_future_analysis": "all original transfer texts; no outcome-driven explained-only primary",
+  "scope": "58 original correction sources; same three error40 pools. No evaluation inputs or outcomes in authoring.",
+  "status": "source_authoring_rules_fixed_before_saved_drafts",
+  "words": [
+    30,
+    60
+  ]
+}

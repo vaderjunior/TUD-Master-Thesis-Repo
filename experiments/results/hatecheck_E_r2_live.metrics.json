@@ -1,0 +1,245 @@
+{
+  "rag": {
+    "gate": {
+      "strict": {
+        "macro_f1": 0.9418996190036728,
+        "mapping": "strict",
+        "per_class": {
+          "hate": {
+            "precision": 0.9417655786350149,
+            "recall": 0.9910226385636222,
+            "f1": 0.9657664511220997,
+            "tp": 2539,
+            "fp": 157,
+            "fn": 23
+          },
+          "not_hate": {
+            "precision": 0.9776915615906887,
+            "recall": 0.8652360515021459,
+            "f1": 0.9180327868852458,
+            "tp": 1008,
+            "fp": 23,
+            "fn": 157
+          }
+        },
+        "tp": 2539,
+        "fp": 157,
+        "fn": 23,
+        "tn": 1008,
+        "per_source": {
+          "hatecheck": {
+            "n": 3727,
+            "benign": 1165,
+            "hateful": 2562,
+            "fp": 157,
+            "fn": 23,
+            "fp_rate": 0.13476394849785409,
+            "fn_rate": 0.00897736143637783
+          }
+        },
+        "n_scored": 3727,
+        "n_unscored": 1,
+        "n_uncertain": 3,
+        "macro_f1_confident_only": 0.9421261534141911,
+        "note": null
+      }
+    },
+    "target_group": {
+      "dimension": "target_group",
+      "macro_f1": 0.9241010560345755,
+      "micro_f1": 0.9168364511946655,
+      "per_label": {
+        "disability": {
+          "label": "disability",
+          "precision": 1.0,
+          "recall": 0.9597855227882037,
+          "f1": 0.9794801641586867,
+          "support": 373,
+          "predicted": 358,
+          "tp": 358,
+          "fp": 0,
+          "fn": 15,
+          "averaged": true
+        },
+        "gender": {
+          "label": "gender",
+          "precision": 0.9955947136563876,
+          "recall": 0.9300411522633745,
+          "f1": 0.9617021276595744,
+          "support": 729,
+          "predicted": 681,
+          "tp": 678,
+          "fp": 3,
+          "fn": 51,
+          "averaged": true
+        },
+        "national_origin": {
+          "label": "national_origin",
+          "precision": 0.9365079365079365,
+          "recall": 0.9915966386554622,
+          "f1": 0.963265306122449,
+          "support": 357,
+          "predicted": 378,
+          "tp": 354,
+          "fp": 24,
+          "fn": 3,
+          "averaged": true
+        },
+        "other": {
+          "label": "other",
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 0,
+          "predicted": 8,
+          "tp": 0,
+          "fp": 8,
+          "fn": 0,
+          "averaged": false
+        },
+        "race": {
+          "label": "race",
+          "precision": 0.8768472906403941,
+          "recall": 0.9971988795518207,
+          "f1": 0.9331585845347314,
+          "support": 357,
+          "predicted": 406,
+          "tp": 356,
+          "fp": 50,
+          "fn": 1,
+          "averaged": true
+        },
+        "religion": {
+          "label": "religion",
+          "precision": 1.0,
+          "recall": 0.9758713136729222,
+          "f1": 0.9877883310719131,
+          "support": 373,
+          "predicted": 364,
+          "tp": 364,
+          "fp": 0,
+          "fn": 9,
+          "averaged": true
+        },
+        "sexual_orientation": {
+          "label": "sexual_orientation",
+          "precision": 0.5685358255451713,
+          "recall": 0.9785522788203753,
+          "f1": 0.7192118226600985,
+          "support": 373,
+          "predicted": 642,
+          "tp": 365,
+          "fp": 277,
+          "fn": 8,
+          "averaged": true
+        }
+      },
+      "labels_averaged": [
+        "disability",
+        "gender",
+        "national_origin",
+        "race",
+        "religion",
+        "sexual_orientation"
+      ],
+      "labels_excluded": [
+        "other"
+      ],
+      "n_items": 2562,
+      "n_unscored": 1,
+      "subset_accuracy": 0.8512880562060889,
+      "hamming_loss": 0.02503624400579904,
+      "extra": {
+        "mean_gold_labels": 1.0,
+        "mean_pred_labels": 1.1073380171740828,
+        "any_overlap_rate": 0.9660421545667447,
+        "gold_subset_of_pred": 0.9660421545667447
+      }
+    },
+    "hate_type": {
+      "dimension": "hate_type",
+      "macro_f1": null,
+      "micro_f1": 0.0,
+      "per_label": {},
+      "labels_averaged": [],
+      "labels_excluded": [],
+      "n_items": 0,
+      "n_unscored": 0,
+      "subset_accuracy": 0.0,
+      "hamming_loss": 0.0,
+      "extra": {}
+    },
+    "legal": {
+      "dimension": "legal",
+      "macro_f1": null,
+      "micro_f1": 0.0,
+      "per_label": {},
+      "labels_averaged": [],
+      "labels_excluded": [],
+      "n_items": 0,
+      "n_unscored": 0,
+      "subset_accuracy": 0.0,
+      "hamming_loss": 0.0,
+      "extra": {}
+    },
+    "severity": {
+      "dimension": "severity",
+      "macro_f1": null,
+      "micro_f1": 0.0,
+      "per_label": {},
+      "labels_averaged": [],
+      "labels_excluded": [],
+      "n_items": 0,
+      "n_unscored": 0,
+      "subset_accuracy": 0.0,
+      "hamming_loss": 0.0,
+      "extra": {}
+    },
+    "calibration": {
+      "ece": 0.03717225650657361,
+      "bins": {
+        "0.5": {
+          "n": 3,
+          "accuracy": 0.6666666666666666,
+          "confidence": 0.5
+        },
+        "0.667": {
+          "n": 123,
+          "accuracy": 0.6097560975609756,
+          "confidence": 0.667
+        },
+        "1.0": {
+          "n": 3601,
+          "accuracy": 0.9636212163287976,
+          "confidence": 1.0
+        }
+      },
+      "n": 3727,
+      "note": "vote share proxy; n_votes=3 gives 2-3 distinct values"
+    },
+    "honesty": {
+      "n_items": 3728,
+      "total_runs": 11184,
+      "parse_failures": 42,
+      "parse_failure_rate": 0.0037553648068669528,
+      "repairs": 524,
+      "normalisations": 0,
+      "gate_normalised": 0,
+      "uncertain": 3,
+      "no_prediction": 1,
+      "mean_latency_s": 6.720961194563662,
+      "workers": [
+        8
+      ],
+      "models": {
+        "Qwen/Qwen3-VL-32B-Instruct": 3728
+      },
+      "kb_versions": [
+        "b3e1a021777f7b85"
+      ],
+      "prompt_versions": [
+        "classify_v1-8e588db7"
+      ]
+    }
+  }
+}

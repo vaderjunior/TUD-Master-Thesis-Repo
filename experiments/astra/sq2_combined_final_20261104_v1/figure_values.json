@@ -1,0 +1,188 @@
+{
+  "resource_boundaries": [
+    {
+      "labels": [
+        "Search",
+        "Final models"
+      ],
+      "title": "Canonical fitting timers\nSummed worker-hours",
+      "unit": "Worker-hours",
+      "values": [
+        386.46439730872424,
+        4.37108118949309
+      ]
+    },
+    {
+      "labels": [
+        "Active invocations",
+        "Between invocations"
+      ],
+      "title": "GPU controller span\nElapsed, not summed worker time",
+      "unit": "Elapsed hours",
+      "values": [
+        57.10512351532777,
+        36.34292328549756
+      ]
+    },
+    {
+      "labels": [
+        "Full",
+        "Small",
+        "No retrieval"
+      ],
+      "title": "Qwen generation protocol\nMean reported tokens per voted answer",
+      "unit": "Reported tokens / answer",
+      "values": [
+        3058.536736486799,
+        3320.53628951465,
+        1912.1103558823077
+      ]
+    }
+  ],
+  "retrieval_confidence": {
+    "full_zero": [
+      {
+        "confidence": 0.95,
+        "difference": 0.13098770457273087,
+        "endpoint": "de_legal_test/legal",
+        "interval": [
+          0.08387964619311902,
+          0.17944589997870058
+        ],
+        "role": "supporting"
+      },
+      {
+        "confidence": 0.95,
+        "difference": 0.04110381297300366,
+        "endpoint": "de_test/hate",
+        "interval": [
+          0.030543760337318666,
+          0.05185685222874386
+        ],
+        "role": "supporting"
+      },
+      {
+        "confidence": 0.95,
+        "difference": 0.02883424181901865,
+        "endpoint": "en_hatecheck_eval/hate",
+        "interval": [
+          0.017763794625364225,
+          0.04181446975584791
+        ],
+        "role": "supporting"
+      },
+      {
+        "confidence": 0.95,
+        "difference": 0.017539329048377555,
+        "endpoint": "en_hatecheck_eval/target_group",
+        "interval": [
+          0.010564829839318729,
+          0.024293857418019194
+        ],
+        "role": "supporting"
+      },
+      {
+        "confidence": 0.95,
+        "difference": 0.06479746233502233,
+        "endpoint": "en_test/hate",
+        "interval": [
+          0.05857274141098662,
+          0.07092335499521939
+        ],
+        "role": "supporting"
+      },
+      {
+        "confidence": 0.95,
+        "difference": 0.07243417073557448,
+        "endpoint": "en_test/hate_type",
+        "interval": [
+          0.05073864722711923,
+          0.0948925818321723
+        ],
+        "role": "supporting"
+      },
+      {
+        "confidence": 0.95,
+        "difference": 0.13163716195949446,
+        "endpoint": "en_test/severity",
+        "interval": [
+          0.1065422844833002,
+          0.15621667811347797
+        ],
+        "role": "supporting"
+      },
+      {
+        "confidence": 0.95,
+        "difference": 0.0003514542083554728,
+        "endpoint": "en_test/target_group",
+        "interval": [
+          -0.011239074826298686,
+          0.01216752487085956
+        ],
+        "role": "supporting"
+      },
+      {
+        "confidence": 0.95,
+        "difference": 0.06849908002527025,
+        "endpoint": "larger_dev/severity",
+        "interval": [
+          0.04439576898551129,
+          0.09208066659943079
+        ],
+        "role": "supporting"
+      },
+      {
+        "confidence": 0.95,
+        "difference": 0.011285676469291794,
+        "endpoint": "larger_dev/target_group",
+        "interval": [
+          -0.0013087852911559529,
+          0.02398727066307403
+        ],
+        "role": "supporting"
+      }
+    ],
+    "primary_full_small": [
+      {
+        "confidence": 0.9875,
+        "difference": 0.054698799385978436,
+        "endpoint": "de_legal_test/legal",
+        "interval": [
+          -0.005235170652452293,
+          0.11193904018811744
+        ],
+        "role": "primary"
+      },
+      {
+        "confidence": 0.9875,
+        "difference": 0.057590769690082845,
+        "endpoint": "en_test/hate",
+        "interval": [
+          0.050342634599296124,
+          0.06482322589893491
+        ],
+        "role": "primary"
+      },
+      {
+        "confidence": 0.9875,
+        "difference": -0.014588722650803465,
+        "endpoint": "larger_dev/severity",
+        "interval": [
+          -0.04625090315941263,
+          0.016396441237457413
+        ],
+        "role": "primary"
+      },
+      {
+        "confidence": 0.9875,
+        "difference": 0.011469897671723128,
+        "endpoint": "larger_dev/target_group",
+        "interval": [
+          -0.0019469454369227127,
+          0.025032213662691948
+        ],
+        "role": "primary"
+      }
+    ]
+  }
+}

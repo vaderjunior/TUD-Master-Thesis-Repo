@@ -1,0 +1,35 @@
+name: lang_probe_bm25
+description: >
+  Channel provenance for sq1 §3.7, BM25 channel only. Mock only, zero API.
+
+  PRE-REGISTERED PREDICTION, frozen before the run: German query tokens
+  cannot lexically match English guideline text, so the German share of
+  guideline slots under BM25 alone will EXCEED the 81.0% measured under
+  hybrid fusion, and may reach 100%.
+
+  FALSIFIED IF the BM25 German share is at or below 81.0%. Note that §3.3
+  found BM25 on the definitions bucket anti-correlated with relevance, so the
+  definitions column here is a diagnostic and not a recommendation.
+
+  Not at the frozen config: strategy differs. Must not be pooled with
+  de_dev_kbv3_*.
+subset: de_dev_eval
+arms: [rag]
+provider: peasec
+pinned_model: Qwen/Qwen3-VL-32B-Instruct
+temperature: 1.0
+allow_fallback: false
+n_votes: 3
+workers: 8
+gate_mapping: strict
+retrieval:
+  strategy: bm25
+  k_definitions: 2
+  k_guidelines: 2
+  k_examples: 5
+  k_examples_feedback: 0
+  use_mmr: true
+  mmr_lambda: 0.7
+  mmr_pool_factor: 3
+  use_reranker: false
+  rrf_k: 60

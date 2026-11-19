@@ -1,0 +1,30 @@
+name: hatecheck_probe_g
+description: >
+  RETRIEVAL PROBE. MockClient only, zero API calls, no result is reported from
+  this file. Measures which definitions, guidelines and examples retrieval
+  actually delivers per HateCheck functionality at the frozen config, so the
+  intended guideline mapping can be pre-registered as a hypothesis and the
+  actual one measured against it. Three hand-probes on 2026-08-25 showed
+  guide-counter-speech failing to fire for a counter-speech item, so the
+  intended mapping is not assumed.
+subset: en_hatecheck_eval
+arms: [rag]
+provider: peasec
+pinned_model: Qwen/Qwen3-VL-32B-Instruct
+temperature: 1.0
+allow_fallback: false
+n_votes: 3
+workers: 8
+gate_mapping: strict
+retrieval:
+  strategy: hybrid
+  k_definitions: 0
+  k_definitions_mode: flat
+  k_guidelines: 2
+  k_examples: 0
+  k_examples_feedback: 0
+  use_mmr: true
+  mmr_lambda: 0.7
+  mmr_pool_factor: 3
+  use_reranker: false
+  rrf_k: 60

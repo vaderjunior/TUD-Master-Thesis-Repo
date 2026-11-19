@@ -1,0 +1,11 @@
+source_column,unified_label,note
+discrim_Ethnicity,race,
+discrim_nation,national_origin,
+discrim_religion,religion,
+discrim_sexIdent,sexual_orientation,covers sexual + gender identity in DeTox - FLAG
+discrim_worldview,EXCLUDE,political/philosophical worldview - not a protected characteristic
+discrim_attitude,EXCLUDE,opinion/attitude-based - not protected
+discrim_job,EXCLUDE,occupation - not protected
+discrim_engagement,EXCLUDE,civic/political engagement - not protected
+discrim_socialStatus,EXCLUDE,social class - not in our taxonomy
+discrim_characteristics,EXCLUDE,physical/personal traits - too vague to map

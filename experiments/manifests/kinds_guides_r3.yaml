@@ -1,0 +1,48 @@
+name: kinds_guides_r3
+description: >
+  SQ1 knowledge-kinds ablation. Guidelines-only arm, replicate 3 of 3
+
+  Frozen system throughout: KB b3e1a021777f7b85, prompt classify_v1-8e588db7,
+  taxonomy-072387cd, PEASEC Qwen3-VL-32B-Instruct, T=1.0, n_votes=3, workers 8,
+  k_definitions_mode flat. Only the three retrieval budgets differ from the
+  frozen 2/2/5.
+
+  AN ABLATION, NOT A CONFIGURATION DECISION. The config stays frozen at
+  flat / 2 / 2 / 5 whatever this returns. Every test subset has been touched
+  and no conclusion in the thesis can change from this run.
+
+  NOT AT THE FROZEN CONFIG. Do not pool with the reporting runs. Same handling
+  as defprop_*.
+
+  WHY THIS ARM IS CLEAN. k_examples 0 means from_retrieval appends no example
+  group, so build_prompt renders no caution at all. Contrasts among zero_shot,
+  definitions_only, guidelines_only and abstract_only are free of the caution
+  difference that makes rag - few_shot a comparison of two configurations
+  rather than of retrieval alone (sq2_log 1 and 4.3). Verified before the run
+  by scratch/render_kinds_prompt.py.
+
+  DEFECT 3 DOES NOT APPLY. Arms.k_examples is read only inside _build_fewshot;
+  the rag path calls self.retriever.retrieve directly with the merged manifest
+  cfg. This manifest runs the rag arm only. Checked in classify.py, not assumed.
+
+  PRE-REGISTERED, fixed before any call:
+    K2  guidelines_only - zero_shot is inside the floor. Fourth in-system reproduction 
+    of Mohammadi et al. 2025, and the first at aggregate level on a matched comparison.
+    K5  prediction cardinality stays near zero_shot's 2.44, not rag's 1.77.
+  Floor recomputed across both arms in each comparison after the runs, per the
+  check_sq2_reconcile convention. Baseline zero_shot on this subset is
+  0.336 +/- 0.003 over three replicates.
+  
+subset: en_dev_eval_sq3_types
+arms: [rag]
+retrieval:
+  k_definitions: 0
+  k_guidelines: 2
+  k_examples: 0
+provider: peasec
+pinned_model: Qwen/Qwen3-VL-32B-Instruct
+temperature: 1.0
+allow_fallback: false
+n_votes: 3
+workers: 8
+gate_mapping: strict

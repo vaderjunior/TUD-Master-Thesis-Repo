@@ -1,0 +1,160 @@
+{
+  "budget": {
+    "additional_transport_retries": "Separately bounded/accounted by the runner; no unattended recovery of unknown outcomes.",
+    "conditions_per_input": 11,
+    "distinct_inputs": 1295,
+    "logical_response_ceiling_with_two_repairs_per_vote": 384615,
+    "ordinary_responses": 128205,
+    "predictions": 42735,
+    "prompts": 14245,
+    "staging": "Prepare four reviewable user-run stages where feasible; actual schedule/interleaving, timing and API readiness require a separate tested runner. No automatic stage advance."
+  },
+  "conditions": [
+    "curated_small",
+    "full_reference",
+    "uniform_compact_s42",
+    "uniform_compact_s43",
+    "uniform_compact_s44",
+    "uniform_1000_s42",
+    "uniform_1000_s43",
+    "uniform_1000_s44",
+    "uniform_5000_s42",
+    "uniform_5000_s43",
+    "uniform_5000_s44"
+  ],
+  "context_control": {
+    "abstracts": "Use the original frozen full-reference definitions/guidelines for each input in every arm. The census verified identical ordered full/small abstract lists for all 1295 inputs.",
+    "definitions": 2,
+    "examples": 5,
+    "guidelines": 2,
+    "index_records": "Each sampled condition combines its EN and DE sample plus the same 40 abstract records, in inherited full order. Abstract prompt selections stay fixed.",
+    "language": "Preserve the existing language filter and existing retrieval settings; no task-head, gate or query-gold filtering.",
+    "record_content": "IDs refer to byte-identical frozen full TRAIN records and labels; no source cleanup or annotation imputation.",
+    "reference": "Use byte-identical accepted first-pass full/small message payloads; run fresh classification repeats for both. No old predictions added as new repeats.",
+    "renderer": "Original corrected renderer and RAG caution, original system taxonomy, target text, language and message order.",
+    "retrieval": "Only candidate example pool changes. Rebuild BM25/index statistics for that pool using the unchanged hybrid recipe and frozen embedding/query vectors. Persist first-pass prompts and cold replay before API readiness.",
+    "strategy": "existing hybrid"
+  },
+  "created_utc": "2026-09-26T09:42:44.122055+00:00",
+  "deferred": "Any intervention on label availability itself needs a separate matched-text design; this study tests size/sampling policy. Priority 3, broader TEST/benchmarks and LaTeX remain parked.",
+  "evaluation": {
+    "aggregation": "Calculate fixed-label macro-F1 for each pool and decoder repeat separately, average three repeats per pool, then equally average three pools for each uniform size. Do not pool examples/predictions or count nine settings as nine independent seeds.",
+    "all_rosters": {
+      "de_dev_eval": {
+        "field": "gate",
+        "items": 150,
+        "lang": "de"
+      },
+      "de_legal_dev_eval": {
+        "field": "legal",
+        "items": 175,
+        "lang": "de"
+      },
+      "en_dev_eval_main": {
+        "field": "gate",
+        "items": 299,
+        "lang": "en"
+      },
+      "en_dev_eval_severity": {
+        "field": "severity",
+        "items": 45,
+        "lang": "en"
+      },
+      "en_dev_eval_sq3_types": {
+        "field": "hate_types",
+        "items": 467,
+        "lang": "en"
+      },
+      "en_dev_eval_targets": {
+        "field": "target_groups",
+        "items": 56,
+        "lang": "en"
+      },
+      "en_dev_eval_types": {
+        "field": "hate_types",
+        "items": 103,
+        "lang": "en"
+      }
+    },
+    "failure": "Retain final nulls and invalid votes under the existing bounded repair policy; no favourable reruns. Renderer missing TRAIN annotations differ from missing/empty model outputs.",
+    "focal_rosters": [
+      "en_dev_eval_main",
+      "en_dev_eval_sq3_types",
+      "de_legal_dev_eval"
+    ],
+    "limits": "The single historical curated pool is not replicated curation; differences concern this curation instance. More label records are not more independent evaluation texts. No new TEST, benchmark or adaptation scope.",
+    "primary_contrasts_per_focal_roster": [
+      "full_reference minus mean(uniform_compact_s42,s43,s44)",
+      "curated_small minus mean(uniform_compact_s42,s43,s44)"
+    ],
+    "primary_family": {
+      "contrasts": 6,
+      "family_alpha": 0.05,
+      "per_contrast_two_sided_CI_percent": 99.16666666666667
+    },
+    "repeats": 3,
+    "secondary": "All seven rosters retain full tables, per-label/errors/coverage; intermediate 1000/5000 size curves and full-minus-curated replication use descriptive 95% intervals. Do not select or promote a winning size from these intervals.",
+    "uncertainty": "10000 paired item bootstrap draws, seed 20260926, same item draw for all settings in an endpoint. Average per-setting F1 exactly as above. Conditional on the three fixed pool draws and decoder repeats; separately report between-pool and within-pool variation. Shared all-33-setting complete mask per endpoint plus full-roster null bounds and original denominators.",
+    "votes_per_prediction": 3
+  },
+  "input_hashes": {
+    "experiments/astra/full_kb_core_20260915_v1/dev_inputs.jsonl": "d6c2de6631bf00e4d774961034c63de88b91a5c0ad3267a41734c1990e4ca36c",
+    "experiments/astra/full_kb_core_20260915_v1/kb/full/records.jsonl": "ae63f259519455154c1dcf617b8e649908416f2117b171fc27b0b1c37c3d3961",
+    "experiments/astra/full_kb_core_20260915_v1/kb/small/records.jsonl": "96fbf0f91e890683c9d2ee7b48160d782471bce150e7f540f5e4771c043552a3",
+    "experiments/astra/full_kb_core_20260915_v1/plan.json": "5c610f4fe320b5e0f185315933d47b388ab645b20b52eed738541a1579184e4e",
+    "experiments/astra/full_kb_core_20260915_v1/retrieval_v1/full/prompts.jsonl": "ab851c042a1b33dc460c0d2fd60bb7839feb24b3a1d3d4779c5805c3528cc221",
+    "experiments/astra/full_kb_core_20260915_v1/retrieval_v1/plan.json": "c86b65e3375fd8f32b11455a79c9bfb738f1de9ab938e3d726c66ae855480d35",
+    "experiments/astra/full_kb_core_20260915_v1/retrieval_v1/small/prompts.jsonl": "f31ac7def4c61accd735c2b3151ecc22047e3032d61ba935b879f7a12dc5e009",
+    "experiments/astra/sq1_annotation_coverage_20260926_v1/independent_check.json": "a1893182594836234c8686c24c367277754cc7ee89809f4452b740e52ca11468",
+    "experiments/astra/sq1_annotation_coverage_20260926_v1/results.json": "be39ec658836bc06a65934a57f3f1240b6801bf8f11d7d39f6684e2156dec76b",
+    "experiments/astra/sq1_pool_size_composition_20260926_v1/pool_manifests.json": "501c13ed3f409efa85d5dd90b1f4ca36f1c4987495e716ff0abaa1c2d85479b1",
+    "scratch/analysis/astra_sq1_annotation_coverage_check_v1.py": "bd12845ef6c16ea9a8c7c6f69567d8548179a419cfe0aee81ab6e23a3c487756",
+    "scratch/analysis/astra_sq1_annotation_coverage_v1.py": "0b85a11f1f0919b043edb21e34b2c60c3ec5d0ddb7954b75452b14701caedea6",
+    "scratch/analysis/astra_sq1_pool_design_check_v1.py": "c742c7a1cb1aebf76628292a3b55e16fbf4a1362a417a9cbddafb0690e5204f0",
+    "scratch/analysis/astra_sq1_pool_design_v1.py": "922b52580dc87e4d7ef7be4e375abba3dee9893e53a96edb1d6ff882e03f20c2"
+  },
+  "preservation": "New isolated manifests only. All old results, source pools and active indexes remain unchanged; full KB/hybrid/original two definitions stays main.",
+  "questions": [
+    "How does performance change as a uniformly sampled candidate pool grows, while only five examples reach each prompt?",
+    "At the same record budget, how does the existing curated small KB compare with three random subsets of the full eligible TRAIN pool?"
+  ],
+  "rationale": "The verified census found simultaneous changes in pool size, class/source mixture and annotation density. Existing full/small scores cannot isolate size.",
+  "reference_prompts": {
+    "curated_small": "experiments/astra/full_kb_core_20260915_v1/retrieval_v1/small/prompts.jsonl",
+    "full_reference": "experiments/astra/full_kb_core_20260915_v1/retrieval_v1/full/prompts.jsonl"
+  },
+  "remaining_before_execution": [
+    "Independent manifest verification",
+    "Frozen retrieval protocol, source/environment binding, isolated indexes and vector identity checks",
+    "Saved prompts plus full cold replay and independent retrieval/prompt audit",
+    "Freeze complete scoring/failure contract, schedule, bounded resumable runner, mock execution and restart checks"
+  ],
+  "sampling": {
+    "algorithm": "Sort every eligible language-specific example by (raw SHA256 bytes of UTF8 salt|language|seed|record_id, record_id). Take prefixes. Retain original full-KB order for index construction.",
+    "interpretation": "Same sampling policy across sizes; realised class/source/annotation composition can vary. Three fixed draws quantify limited pool variation, not a precise population distribution.",
+    "labels_used_to_sample": false,
+    "nested": "For each language and seed, compact is a subset of 1000, which is a subset of 5000, which is a subset of full.",
+    "policy": "Uniform hash ordering without replacement; no quotas, rebalancing, coverage-based rejection or resampling. Retain poor label coverage if drawn.",
+    "query_text_or_gold_used_to_sample": false,
+    "salt": "astra-sq1-pools-v1",
+    "seeds": [
+      42,
+      43,
+      44
+    ],
+    "sizes_by_language": {
+      "de": [
+        153,
+        1000,
+        5000
+      ],
+      "en": [
+        147,
+        1000,
+        5000
+      ]
+    }
+  },
+  "selection_history": "Designed after inspecting existing DEV accuracy and the annotation census. This is a post-selection mechanism study, not untouched confirmation.",
+  "status": "scientific_design_and_TRAIN_pool_manifests_frozen_execution_not_ready"
+}

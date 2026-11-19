@@ -1,0 +1,130 @@
+name: hatecheck_A_r2
+description: >
+  Replicate 2 of three. Pre-registration, measured facts R1 to R4 and the
+  leakage flags are in hatecheck_A_r1's description and are not repeated. Same
+  subset, same arms, same frozen configuration; only decoding varies, which is
+  what makes the spread across these three the floor.
+
+  HATECHECK, ENGLISH, FULL SUITE. Replicate 1 of three. Röttger et al. 2021,
+  3,728 cases, 29 functionalities, CC BY 4.0, evaluation-only. Closes the
+  HateCheck promise made in the registered expose's definition of consistency.
+
+  SCOPE. A FUNCTIONAL TEST, NOT A DOMAIN-SHIFT TEST. Template-generated, 845
+  templates at mean 4.41 cases each, 0 templates spanning more than one
+  functionality. Published 2021 and on HuggingFace, so the model has probably
+  seen it: absolute pass rates are not evidence of generalisation and only the
+  within-model arm contrast is interpretable. Every bootstrap clusters on
+  templ_id, not on items.
+
+  CONFIGURATION FROZEN at hybrid, k_definitions_mode flat, 2/2/5, MMR on
+  examples. Identical to both test runs.
+
+  MEASURED BEFORE ANY CALL, from hatecheck_probe_mock (zero API, retrieval is
+  deterministic so this IS the retrieval these arms will perform):
+
+  R1. GUIDELINE REACH IS 113/693 = 16.3% on the block whose rules exist.
+      counter_ref_nh 0/141. counter_quote_nh 6/173 = 3.5%. slur_reclaimed_nh
+      12.3%. profanity_nh 13.0%. target_indiv_nh 20.0%. negate_neg_nh 53.4%,
+      which alone supplies 71 of the 113. guide-counter-speech was retrieved 5
+      times in 3,728 items. The guidelines bucket has no relevance floor: it
+      returns two records whatever the input, and guide-negation-and-support
+      appears on 40.8% of all items regardless of content.
+
+  R2. DEFINITION BURIAL AT SCALE. target_group definitions take 4,873 of 7,456
+      definition slots (65.4%) on a benchmark where only the gate is scored.
+      def-hate takes 132 (1.8%), reaching 9.8% of guideline_covered, 3.1% of
+      definition_covered, 2.3% of uncovered, 2.0% of hateful. config.yaml's own
+      comment predicted this in writing before any of it was run. The
+      definition_covered block is therefore a second uncovered block in
+      practice and is reported with its reach beside it.
+
+  R3. FINDING E AT SCALE. The KB is 204/320 = 63.75% hateful examples. Retrieval
+      returns 90.4% hateful to guideline_covered input, 90.9% to
+      definition_covered, 83.8% to uncovered, 92.7% to hateful. All five
+      examples are hateful on 61.8% of guideline_covered items. Retrieval
+      barely distinguishes gold-hateful from gold-non-hateful input.
+
+  R4. CROSS-LINGUAL GUIDELINE LEAK. Guidelines are language-blind in both
+      channels by design (tests/test_retrieval_probes.py asserts the German
+      direction). Reverse direction measured at 109/3,728 items, 112/7,456
+      slots, both slots German on 3 items, 7/693 on guideline_covered. Not
+      fixed, config frozen.
+
+  PRE-REGISTERED, strongest first.
+
+  H1. rag - zero_shot on the FALSE-POSITIVE RATE of the 1,165 non-hateful
+      items, reported per block. Predicted NEGATIVE OR NULL, because 84% of the
+      block never receives its rule. Gate macro-F1 over both classes is
+      UNDEFINED on a single-class block (metrics.py returns None); whole-suite
+      macro is reported alongside for comparability and is not the test.
+      Floor = the widest arm's FP-rate spread across these three replicates.
+      sq3_log 4.10 measured an FP spread of 7 on 121 items from decoding
+      alone, so this may simply be underpowered, and that is stated now rather
+      than after a null. FALSIFIED by a reduction clearing its floor.
+
+  H3. rag - few_shot on the non-hateful FP rate. Predicted few_shot >= rag.
+      The static sample is 5 of 5 hateful (already recorded 2026-07-24), so
+      this is similarity-selected 90% hateful against random 100% hateful, and
+      similarity-selection may be worse because it pulls examples sharing
+      surface words with the input. FALSIFIED by rag clearing its floor
+      positive. NOTE the arms also render different caution text
+      (STATIC_EXAMPLES_CAUTION vs EXAMPLES_CAUTION, the latter being the
+      Finding E mitigation), so selection and caution wording are confounded.
+      That confound is baked into every rag - few_shot number in this thesis
+      and cannot be removed without moving prompt_version.
+
+  H5. rag - zero_shot on target_group, hateful side only (n=2,563, six labels,
+      no `other`, single-label template gold, min support 357). Gold
+      cardinality here is 1.00 against 2.23 on en_dev_eval_targets, where the
+      system UNDER-predicts and rag went -0.012. sq2_log 11 says retrieval
+      tightens the prediction set, so the sign should flip POSITIVE.
+      TWO VOID CONDITIONS, both registered now:
+        (a) if predicted cardinality is approximately 1.0, the over-prediction
+            regime the account needs never existed. VOID, not falsified.
+        (b) if both arms exceed 0.90 macro, there is no headroom. VOID by
+            ceiling, which is sq2_log 9.4's no-headroom argument.
+      FALSIFIED only by a negative delta with predicted cardinality above 1.3
+      and both arms below 0.90.
+
+  H6. Schema repairs: rag fewest, few_shot most, replicating SQ1's 20.8
+      against 95.0 at 8x the n.
+
+  H4 is scored from these runs plus the encoder checkpoints, which cost no API
+  calls, and from the oracle-guideline conditions. Encoder note:
+  predict_encoder.ARM_SUBSETS is hardcoded and predict_encoder uses write_text
+  rather than append, so encoder_*_live.jsonl is backed up first and the
+  non-HateCheck rows diffed after; identical means nothing drifted since
+  2026-08-21.
+
+  LEAKAGE, FLAGGED BEFORE THE RUN. KB scan clear at max cosine 0.8464, so no
+  retrieved near-copy can inflate rag. Train scan: 3 items at or above 0.95
+  (hatecheck-4, hatecheck-3386, hatecheck-160) against 2 train rows, both
+  inside Arm A's training data and absent from leakage_train_exclusions.json
+  because this subset did not exist when it was written. 0.08%, reported as a
+  bound; the exclusions file is NOT regenerated, which would desynchronise it
+  from 33 checkpoints. Separately, hatecheck-2973 ("I hate you.") is
+  character-identical to a train row after normalisation and sits at cosine
+  0.9395, below both thresholds: on five-word text the cosine detector
+  under-detects and the normalised detector carried the scan. That is a caveat
+  on every leakage claim in this thesis, not only this one.
+subset: en_hatecheck_eval
+arms: [zero_shot, few_shot, rag]
+provider: peasec
+pinned_model: Qwen/Qwen3-VL-32B-Instruct
+temperature: 1.0
+allow_fallback: false
+n_votes: 3
+workers: 8
+gate_mapping: strict
+retrieval:
+  strategy: hybrid
+  k_definitions: 2
+  k_definitions_mode: flat
+  k_guidelines: 2
+  k_examples: 5
+  k_examples_feedback: 0
+  use_mmr: true
+  mmr_lambda: 0.7
+  mmr_pool_factor: 3
+  use_reranker: false
+  rrf_k: 60

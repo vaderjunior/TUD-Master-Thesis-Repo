@@ -1,0 +1,80 @@
+{
+  "C": 10.0,
+  "actual_API_calls": 0,
+  "bootstrap_draws": 10000,
+  "bootstrap_seeds": [
+    2026101224,
+    2026101225,
+    2026101226,
+    2026101227
+  ],
+  "created_utc": "2026-10-12T18:43:45.673732+00:00",
+  "cutoff": 0.6,
+  "cutoff_operator": ">",
+  "environment": {
+    "packages": {
+      "numpy": "2.5.0",
+      "pyarrow": "24.0.0",
+      "scikit-learn": "1.9.0",
+      "scipy": "1.18.0",
+      "threadpoolctl": "3.6.0"
+    },
+    "python": "3.13.14 (tags/v3.13.14:fd17997, Jun 10 2026, 13:03:48) [MSC v.1944 64 bit (AMD64)]"
+  },
+  "full_baseline_reproduction": "required_first_at_execution",
+  "inputs": {
+    "experiments/astra/full_kb_core_20260915_v1/retrieval_v1/full_vectors.npy": "97ab3d05b4c86cc822f7f063247b644c3155771bc3cc2b98c83a1434db573384",
+    "experiments/astra/sq2_cpu_baselines_20261012_v2/data/evaluation.json": "ffbeddec6884ad2b2332aa8cdc44c4775682a1cf8801782cb4590ca471807406",
+    "experiments/astra/sq2_cpu_baselines_20261012_v2/data/evaluation_vectors.npy": "195c74441ee61b99f19fc81ea8072b4f6e21e99e8a1c2ba3af614d8c2a8bfca3",
+    "experiments/astra/sq2_cpu_baselines_20261012_v2/data/full_heads.json": "e9edff89c72c35db11beecb5e7dd298d0f564e28a4e8923770823d936f9f9483",
+    "experiments/astra/sq2_cpu_baselines_20261012_v2/data/train_texts.jsonl": "2315e9ca67ceb45a3a5931cd8a6888fda8aa492f3bbee7cee3bea44eaecffc65",
+    "experiments/astra/sq2_cpu_baselines_20261012_v2/groups/full_bge_s42/hate/features/all_permitted/attempts/2f15893cd72e/fit.npy": "5167baf93dfcaceeca3cc72bda94eedda665d80153bcf8c95069a50813ceab5a",
+    "experiments/astra/sq2_cpu_baselines_20261012_v2/groups/full_bge_s42/hate/features/matched/attempts/ddf3331d24aa/fit.npy": "7ab52ed79305d7b4adf71ce756385ca35369b44143c6532842a42c37629c7e3e",
+    "experiments/astra/sq2_cpu_baselines_20261012_v2/groups/full_bge_s42/hate/final/all_permitted/attempts/5ea67266b539/model.npz": "5775270168e8bd485006e5fea335ec2159d4e0fdabd92e9ef2168dc024f5bce9",
+    "experiments/astra/sq2_cpu_baselines_20261012_v2/groups/full_bge_s42/hate/inference/all_permitted/attempts/01b2a0fe3c50/probabilities.npy": "1b998845dc56e5575f474e16399330c519d446a9e8a4b224c564702e80031a39",
+    "experiments/astra/sq2_cpu_baselines_20261012_v2/groups/full_bge_s42/hate/inference/matched_gradient/attempts/337490bf60bd/probabilities.npy": "21e7b749ff2a429a7c3bf42a17fe16eea6c490848e28d921c1639b64fd221027",
+    "experiments/astra/sq2_cpu_baselines_20261012_v2/groups/full_bge_s42/hate/result/attempts/efdef3b2d089/head.json": "b501cc4fc8e7ff36288ebce1377527f50d12cd3f24b8d90edd3965761d62b68f",
+    "experiments/astra/sq2_cpu_baselines_20261012_v2/groups/full_bge_s42/hate/result/complete.json": "6ac3227e6ea5ccaf7c17e3f72e239737cf80f0fc8ac7eb2b57605184ea8c3a6c",
+    "experiments/astra/sq2_cpu_baselines_20261012_v2/groups/full_bge_s42/hate/search/C10/attempts/450a1401d707/model.npz": "c02385f8c63efdbd4ec2f2a40b6c5ac9fb2ed4aaf0e5d4af19a1e2a33cfc2b62",
+    "experiments/astra/sq2_cpu_baselines_20261012_v2/plan.json": "3e18117fce09e114d8ff2cb49b40e2aaa13c0ac3d6c89e550030ce92da3d63a1",
+    "experiments/astra/sq3_additions_20261004_v1/benign_selection/query_vectors.npy": "643f55ea565cfe735f40fdf32c574b4926b726832fb9bbf8338362cc20b822e5",
+    "experiments/astra/sq3_additions_20261004_v1/benign_selection/roster.jsonl": "cae326eba02a029835bd1bad6887077a47edba1fc5ab3dfd5ec616db98f316cc",
+    "experiments/astra/sq3_additions_results_20261006_v1/benign_selection/actual_pools.json": "c585346c6246b5c36667aa84100d1fb6b3ae5ba847f2dd30316140f50f0a96e2",
+    "experiments/astra/sq3_followups_20261012_v1/scope/complete.json": "95340ff81ea4bbc085b0cabaa3beb506dce63178a3cf856c97c3d78b355e695b",
+    "experiments/astra/sq3_followups_20261012_v1/scope/evaluation.jsonl": "b3084c6517cac5d933a47a4660c18449cde7296f29bf519fdb50c9fb919d17e8",
+    "experiments/astra/sq3_followups_20261012_v1/scope/plan.json": "f59f16243bf76682aabf160d0216f511d1f6f10d222a30e700fe5ecddf0e75b8",
+    "experiments/astra/sq3_followups_20261012_v1/scope/sensitivity.json": "9dab2cee66e9241fed178947634b2e8a238f025ebb57a4315220863e104473ab",
+    "experiments/astra/sq3_followups_20261012_v1/scope/vectors.npy": "d52d75fcebf68ff9083ae9117aec5adaaa489b928860f74d529885cb7c2e47b9",
+    "experiments/astra/sq3_linear_update_20261012_v1/STUDY_PROTOCOL.md": "e4ee7c6cc6244408e2068c0df9b058ec65dd9f44955c63a05c412800313fbe63",
+    "experiments/astra/sq3_reserved_slot_20261012_v1/roster.jsonl": "d940dae6d2cda2cf8b329475efea7f1d405a6ee29bb8737e4d59a50be4e02a41"
+  },
+  "iterative_additional_logical_fits_max": 72,
+  "new_scientific_fits": 0,
+  "outputs": {
+    "experiments/astra/sq3_linear_update_20261012_v1/data.json": "64f014ef3864e35e99b6a979ffc8627fc3742c98e61d100eb21688bc25a00359",
+    "experiments/astra/sq3_linear_update_20261012_v1/roster.jsonl": "0a547b371b4e69065f8327c53ffe7386c415aeddaa92acbf24b08619976da383"
+  },
+  "primary_confidence": 0.9875,
+  "principal_variant": "all_permitted",
+  "resource_policy": {
+    "initial_ram_GiB": 3.5,
+    "max_private_GiB": 2.6,
+    "reserve_GiB": 1.25
+  },
+  "rows": 16433,
+  "seed": 42,
+  "source_hashes": {
+    "scratch/analysis/astra_sq2_cpu_common_v1.py": "28b2c339f5a18b4cfb6ddf10e2416a90fadddf86b020233a0b6059bb07752a40",
+    "scratch/analysis/astra_sq2_cpu_memory_run_v1.py": "b50327fcb08a4b117dbed434808ee00f1ac6b3107a47576a1f6944af221f203f",
+    "scratch/analysis/astra_sq3_followup_common_v1.py": "d68581df22885f93b2a01f123ad80ce1a568d83c49968201dd041c7bac454cdf",
+    "scratch/analysis/astra_sq3_linear_update_v1.py": "6238e508d3cba58f99538196dcf088e34d051fded913969fa51f691667b5f39d",
+    "scratch/analysis/test_astra_sq3_linear_update_v1.py": "27755031b8832315659e854e42355d83f699d55f91ee37bf350f7159a66549f5",
+    "scripts/astra_run_sq3_linear_update_v1.ps1": "bc8d8dc0b0734626f7cdfce9421491dd663c931799c611f67eed92cd1913cbe4"
+  },
+  "static_logical_fits": 38,
+  "tests": 8,
+  "variants": [
+    "all_permitted",
+    "matched_gradient"
+  ]
+}

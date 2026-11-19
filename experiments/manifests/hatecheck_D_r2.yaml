@@ -1,0 +1,87 @@
+name: hatecheck_D_r2
+description: >
+  Replicate 2 of three. The pre-registration and the measured facts it rests
+  on are in hatecheck_D_r1's description and are not repeated. Same subset,
+  same arm, same retrieval budget; only decoding varies, which is what makes
+  the spread across these three the floor.
+  
+  WHY. hatecheck_A and hatecheck_G measured rag - zero_shot at -0.0479 on the
+  non-hateful false-positive rate (6.96x floor, bootstrap CI [-0.0704,
+  -0.0268]) and guidelines_only - zero_shot at +0.0000 (null on both tests in
+  every block). So the entire effect comes from definitions plus examples and
+  nothing separates them. This arm and hatecheck_E separate them.
+
+  MEASURED BEFORE THIS RUN, from hatecheck_probe_mock, zero API. Definition
+  slots on this subset go 65.4% to target_group and 1.8% to def-hate, which
+  reaches 9.8% of guideline_covered, 3.1% of definition_covered, 2.3% of
+  uncovered and 2.0% of hateful. The definitions bucket is also barely
+  input-sensitive: 257 distinct definition sets across 3,728 items against
+  3,557 distinct example sets.
+
+  PRE-REGISTERED.
+
+  D1. definitions_only - zero_shot is NEGATIVE on the non-hateful FP rate.
+      SQ1's boundary says abstract knowledge moves a BINARY decision where one
+      sentence can be decisive and does not move a seven-way judgement, and
+      both of SQ1's positive abstract-knowledge results are gate results. This
+      is a gate benchmark, so SQ1 predicts a gain here. FALSIFIED by a null or
+      positive delta clearing both the floor and a templ_id-clustered paired
+      bootstrap. A prediction that cannot fail carries no information, and
+      this one can: guidelines_only already returned an exact null on the same
+      subset under the same conditions.
+
+  D2. THE EFFECT IS LARGEST ON definition_covered (n=127, target_group_nh +
+      target_obj_nh), because the hate definition's closing sentence
+      ("Offensive or rude language alone, without a protected-group target, is
+      not hate speech") is the only record in the knowledge base that speaks
+      to those cases, and it is the only abstract record ever measured to move
+      anything in this project (sq2_log 12: gate +0.026, FP 99.8 -> 90.8, rank
+      p ~ 0.014). NOTE the tension with the measured 3.1% def-hate reach on
+      that block: if D2 holds at 3.1% reach, the effect per delivery is very
+      large; if D2 fails, reach is the explanation and that is the same
+      conclusion the 16.3% guideline reach supports.
+
+  D3. ADDITIVITY. (D - zs) + (G - zs) + (E - zs) is within one floor of
+      (rag - zs) = -0.0479. SQ1's headline decomposition (+0.021 = -0.004
+      abstract + 0.025 examples) assumes additivity across record kinds and
+      that assumption has never been tested. FALSIFIED by a gap larger than
+      the widest floor, which would mean the kinds interact and every
+      kind-wise decomposition in this thesis needs a caveat.
+
+  Every delta is reported against BOTH the replicate floor and a paired
+  bootstrap clustered on templ_id, per block. On 2026-08-27 guidelines_only -
+  zero_shot on the uncovered block cleared its floor at 1.33x with complete
+  separation and its clustered bootstrap CI contained zero; it was withdrawn.
+  That is the third such instance in this project and the reason both tests
+  are quoted here in advance.
+
+  THIS ARM STAMPS arm: "rag" because the manipulation is a retrieval budget
+  rather than a prompt context. Source maps key on (stem, arm) pairs, same as
+  kinds_*, defprop_* and hatecheck_G_*. NOT at the frozen config and MUST NOT
+  be pooled with hatecheck_A_*.
+
+  ARMS MUST STAY [rag]. run_slice1 constructs Arms with k_examples read from
+  config.yaml while the Retriever gets the merged manifest config, so a
+  few_shot arm here would receive 5 static examples under a manifest that
+  says 0. Known unfixed defect, avoided by construction.
+subset: en_hatecheck_eval
+arms: [rag]
+provider: peasec
+pinned_model: Qwen/Qwen3-VL-32B-Instruct
+temperature: 1.0
+allow_fallback: false
+n_votes: 3
+workers: 8
+gate_mapping: strict
+retrieval:
+  strategy: hybrid
+  k_definitions: 2
+  k_definitions_mode: flat
+  k_guidelines: 0
+  k_examples: 0
+  k_examples_feedback: 0
+  use_mmr: true
+  mmr_lambda: 0.7
+  mmr_pool_factor: 3
+  use_reranker: false
+  rrf_k: 60

@@ -1,0 +1,278 @@
+{
+  "actual_API_calls": 0,
+  "annotation_slot_counts": {
+    "full": {
+      "hate_observed": 5980,
+      "hate_type_observed": 1159,
+      "legal_observed": 497,
+      "severity_observed": 602,
+      "target_group_observed": 985
+    },
+    "small": {
+      "hate_observed": 5791,
+      "hate_type_observed": 2519,
+      "legal_observed": 744,
+      "severity_observed": 1147,
+      "target_group_observed": 2367
+    }
+  },
+  "bootstrap_draws": 10000,
+  "bootstrap_seed_base": 202610010,
+  "clusters": 1294,
+  "comparison_order": [
+    "en_dev_eval_main/full",
+    "en_dev_eval_main/small",
+    "de_legal_dev_eval/full",
+    "de_legal_dev_eval/small",
+    "en_dev_eval_sq3_types/full",
+    "en_dev_eval_sq3_types/small",
+    "en_dev_eval_targets/full",
+    "en_dev_eval_targets/small",
+    "en_dev_eval_severity/full",
+    "en_dev_eval_severity/small",
+    "de_dev_eval/full",
+    "de_dev_eval/small",
+    "en_dev_eval_types/full",
+    "en_dev_eval_types/small"
+  ],
+  "created_utc": "2026-10-01T13:35:59.141809+00:00",
+  "deterministic_predictions": 2590,
+  "environment": {
+    "packages": {
+      "PyYAML": "6.0.3",
+      "numpy": "2.5.0",
+      "pandas": "3.0.3",
+      "pyarrow": "24.0.0",
+      "pydantic": "2.13.4",
+      "python-dotenv": "1.2.2",
+      "requests": "2.34.2",
+      "urllib3": "2.7.0"
+    },
+    "python": "3.13.14"
+  },
+  "exports": {
+    "de_dev_eval/full/0": "experiments/astra/full_kb_core_20260915_v1/secondary_results_v3/de_dev_eval/assembled/rag_full_rep0.jsonl",
+    "de_dev_eval/full/1": "experiments/astra/full_kb_core_20260915_v1/secondary_results_v3/de_dev_eval/assembled/rag_full_rep1.jsonl",
+    "de_dev_eval/full/2": "experiments/astra/full_kb_core_20260915_v1/secondary_results_v3/de_dev_eval/assembled/rag_full_rep2.jsonl",
+    "de_dev_eval/small/0": "experiments/astra/full_kb_core_20260915_v1/secondary_results_v3/de_dev_eval/assembled/rag_small_rep0.jsonl",
+    "de_dev_eval/small/1": "experiments/astra/full_kb_core_20260915_v1/secondary_results_v3/de_dev_eval/assembled/rag_small_rep1.jsonl",
+    "de_dev_eval/small/2": "experiments/astra/full_kb_core_20260915_v1/secondary_results_v3/de_dev_eval/assembled/rag_small_rep2.jsonl",
+    "de_legal_dev_eval/full/0": "experiments/astra/full_kb_core_20260915_v1/primary_results_v1/assembled/de_legal_dev_eval/rag_full_rep0.jsonl",
+    "de_legal_dev_eval/full/1": "experiments/astra/full_kb_core_20260915_v1/primary_results_v1/assembled/de_legal_dev_eval/rag_full_rep1.jsonl",
+    "de_legal_dev_eval/full/2": "experiments/astra/full_kb_core_20260915_v1/primary_results_v1/assembled/de_legal_dev_eval/rag_full_rep2.jsonl",
+    "de_legal_dev_eval/small/0": "experiments/astra/full_kb_core_20260915_v1/primary_results_v1/assembled/de_legal_dev_eval/rag_small_rep0.jsonl",
+    "de_legal_dev_eval/small/1": "experiments/astra/full_kb_core_20260915_v1/primary_results_v1/assembled/de_legal_dev_eval/rag_small_rep1.jsonl",
+    "de_legal_dev_eval/small/2": "experiments/astra/full_kb_core_20260915_v1/primary_results_v1/assembled/de_legal_dev_eval/rag_small_rep2.jsonl",
+    "en_dev_eval_main/full/0": "experiments/astra/full_kb_core_20260915_v1/primary_results_v1/assembled/en_dev_eval_main/rag_full_rep0.jsonl",
+    "en_dev_eval_main/full/1": "experiments/astra/full_kb_core_20260915_v1/primary_results_v1/assembled/en_dev_eval_main/rag_full_rep1.jsonl",
+    "en_dev_eval_main/full/2": "experiments/astra/full_kb_core_20260915_v1/primary_results_v1/assembled/en_dev_eval_main/rag_full_rep2.jsonl",
+    "en_dev_eval_main/small/0": "experiments/astra/full_kb_core_20260915_v1/primary_results_v1/assembled/en_dev_eval_main/rag_small_rep0.jsonl",
+    "en_dev_eval_main/small/1": "experiments/astra/full_kb_core_20260915_v1/primary_results_v1/assembled/en_dev_eval_main/rag_small_rep1.jsonl",
+    "en_dev_eval_main/small/2": "experiments/astra/full_kb_core_20260915_v1/primary_results_v1/assembled/en_dev_eval_main/rag_small_rep2.jsonl",
+    "en_dev_eval_severity/full/0": "experiments/astra/full_kb_core_20260915_v1/severity_results_v1/assembled/rag_full_rep0.jsonl",
+    "en_dev_eval_severity/full/1": "experiments/astra/full_kb_core_20260915_v1/severity_results_v1/assembled/rag_full_rep1.jsonl",
+    "en_dev_eval_severity/full/2": "experiments/astra/full_kb_core_20260915_v1/severity_results_v1/assembled/rag_full_rep2.jsonl",
+    "en_dev_eval_severity/small/0": "experiments/astra/full_kb_core_20260915_v1/severity_results_v1/assembled/rag_small_rep0.jsonl",
+    "en_dev_eval_severity/small/1": "experiments/astra/full_kb_core_20260915_v1/severity_results_v1/assembled/rag_small_rep1.jsonl",
+    "en_dev_eval_severity/small/2": "experiments/astra/full_kb_core_20260915_v1/severity_results_v1/assembled/rag_small_rep2.jsonl",
+    "en_dev_eval_sq3_types/full/0": "experiments/astra/full_kb_core_20260915_v1/secondary_results_v4/en_dev_eval_sq3_types/assembled/rag_full_rep0.jsonl",
+    "en_dev_eval_sq3_types/full/1": "experiments/astra/full_kb_core_20260915_v1/secondary_results_v4/en_dev_eval_sq3_types/assembled/rag_full_rep1.jsonl",
+    "en_dev_eval_sq3_types/full/2": "experiments/astra/full_kb_core_20260915_v1/secondary_results_v4/en_dev_eval_sq3_types/assembled/rag_full_rep2.jsonl",
+    "en_dev_eval_sq3_types/small/0": "experiments/astra/full_kb_core_20260915_v1/secondary_results_v4/en_dev_eval_sq3_types/assembled/rag_small_rep0.jsonl",
+    "en_dev_eval_sq3_types/small/1": "experiments/astra/full_kb_core_20260915_v1/secondary_results_v4/en_dev_eval_sq3_types/assembled/rag_small_rep1.jsonl",
+    "en_dev_eval_sq3_types/small/2": "experiments/astra/full_kb_core_20260915_v1/secondary_results_v4/en_dev_eval_sq3_types/assembled/rag_small_rep2.jsonl",
+    "en_dev_eval_targets/full/0": "experiments/astra/full_kb_core_20260915_v1/secondary_results_v2/en_dev_eval_targets/assembled/rag_full_rep0.jsonl",
+    "en_dev_eval_targets/full/1": "experiments/astra/full_kb_core_20260915_v1/secondary_results_v2/en_dev_eval_targets/assembled/rag_full_rep1.jsonl",
+    "en_dev_eval_targets/full/2": "experiments/astra/full_kb_core_20260915_v1/secondary_results_v2/en_dev_eval_targets/assembled/rag_full_rep2.jsonl",
+    "en_dev_eval_targets/small/0": "experiments/astra/full_kb_core_20260915_v1/secondary_results_v2/en_dev_eval_targets/assembled/rag_small_rep0.jsonl",
+    "en_dev_eval_targets/small/1": "experiments/astra/full_kb_core_20260915_v1/secondary_results_v2/en_dev_eval_targets/assembled/rag_small_rep1.jsonl",
+    "en_dev_eval_targets/small/2": "experiments/astra/full_kb_core_20260915_v1/secondary_results_v2/en_dev_eval_targets/assembled/rag_small_rep2.jsonl",
+    "en_dev_eval_types/full/0": "experiments/astra/full_kb_core_20260915_v1/secondary_results_v4/en_dev_eval_types/assembled/rag_full_rep0.jsonl",
+    "en_dev_eval_types/full/1": "experiments/astra/full_kb_core_20260915_v1/secondary_results_v4/en_dev_eval_types/assembled/rag_full_rep1.jsonl",
+    "en_dev_eval_types/full/2": "experiments/astra/full_kb_core_20260915_v1/secondary_results_v4/en_dev_eval_types/assembled/rag_full_rep2.jsonl",
+    "en_dev_eval_types/small/0": "experiments/astra/full_kb_core_20260915_v1/secondary_results_v4/en_dev_eval_types/assembled/rag_small_rep0.jsonl",
+    "en_dev_eval_types/small/1": "experiments/astra/full_kb_core_20260915_v1/secondary_results_v4/en_dev_eval_types/assembled/rag_small_rep1.jsonl",
+    "en_dev_eval_types/small/2": "experiments/astra/full_kb_core_20260915_v1/secondary_results_v4/en_dev_eval_types/assembled/rag_small_rep2.jsonl"
+  },
+  "input_hashes": {
+    "config/taxonomy.yaml": "02dabf77bc27bca61cb4d931429fd7e32046a83fea3ead6f7863420a6417c4c9",
+    "data/processed/de_dev_eval.parquet": "3c161f54b61aa2f88d0c4b7f7824a0e2de2fa85febeda141f5e1f96a2f3e1e2e",
+    "data/processed/de_legal_dev_eval.parquet": "9c3b342c30389ff370f7ed0571f4b74193056b96dd660ce945b5fc0c499e5a65",
+    "data/processed/en_dev_eval_main.parquet": "14f015e2aed261441ac9ce5830a36b2425d1be01903f854a04e84241a7dea188",
+    "data/processed/en_dev_eval_severity.parquet": "6791cb5b55bbda49c513564b81ecc4c5e56b4edf2fa7602a8b4b3b1867e52554",
+    "data/processed/en_dev_eval_sq3_types.parquet": "b31a8cb28f0f4443bdae5489abc44dc80e43b5e4b308f4534d64ae61b130ffd1",
+    "data/processed/en_dev_eval_targets.parquet": "4aa17c9cbd3661718d14d9244a206d79a9d503d842af0159e924d61be0da9a49",
+    "data/processed/en_dev_eval_types.parquet": "54d5ebaf2731a4bf8d755118dc20ccbb5de3e11bdd9dc118add1b3010bb032a4",
+    "experiments/astra/full_kb_core_20260915_v1/dev_inputs.jsonl": "d6c2de6631bf00e4d774961034c63de88b91a5c0ad3267a41734c1990e4ca36c",
+    "experiments/astra/full_kb_core_20260915_v1/kb/full/records.jsonl": "ae63f259519455154c1dcf617b8e649908416f2117b171fc27b0b1c37c3d3961",
+    "experiments/astra/full_kb_core_20260915_v1/kb/small/records.jsonl": "96fbf0f91e890683c9d2ee7b48160d782471bce150e7f540f5e4771c043552a3",
+    "experiments/astra/full_kb_core_20260915_v1/plan.json": "5c610f4fe320b5e0f185315933d47b388ab645b20b52eed738541a1579184e4e",
+    "experiments/astra/full_kb_core_20260915_v1/primary_results_v1/assembled/de_legal_dev_eval/rag_full_rep0.jsonl": "1314d1426cb846d4820b25b5f530dccc1f72f020c1d6c1de66e2fb81c1ce89d8",
+    "experiments/astra/full_kb_core_20260915_v1/primary_results_v1/assembled/de_legal_dev_eval/rag_full_rep1.jsonl": "1e5dff734dd8b7e84a6cad7b4bfe97a7e2709588a52d6651d38e5f14d62bdd0a",
+    "experiments/astra/full_kb_core_20260915_v1/primary_results_v1/assembled/de_legal_dev_eval/rag_full_rep2.jsonl": "1698c3b8dd73de1508a23f1a22caac494cf7ee0008b47cf13e47e00de5f8468b",
+    "experiments/astra/full_kb_core_20260915_v1/primary_results_v1/assembled/de_legal_dev_eval/rag_small_rep0.jsonl": "c9f40512372cc9daa94a1655a85318647a124a329e4982cc0abfb86aab47a9aa",
+    "experiments/astra/full_kb_core_20260915_v1/primary_results_v1/assembled/de_legal_dev_eval/rag_small_rep1.jsonl": "ac4ccb8f45dba6f1af815827495b9f73b54b326cd6621aef3598174366a91d29",
+    "experiments/astra/full_kb_core_20260915_v1/primary_results_v1/assembled/de_legal_dev_eval/rag_small_rep2.jsonl": "348cd9d94202eaf628f3398f5a569db68a1b2d7c057b14cfa51e34a6a09fd99a",
+    "experiments/astra/full_kb_core_20260915_v1/primary_results_v1/assembled/en_dev_eval_main/rag_full_rep0.jsonl": "84def4e8c8e0acb92523001e928b56ecec68d043a7603bddd6b9d9307f487d2c",
+    "experiments/astra/full_kb_core_20260915_v1/primary_results_v1/assembled/en_dev_eval_main/rag_full_rep1.jsonl": "0e453c48cedeac4424618f319589d210272624d154d708ce3d54669d0aa72acb",
+    "experiments/astra/full_kb_core_20260915_v1/primary_results_v1/assembled/en_dev_eval_main/rag_full_rep2.jsonl": "40242cf05d20dba094734b50bcb0595bb4855f989ae96bafcec90e3f5bfc3730",
+    "experiments/astra/full_kb_core_20260915_v1/primary_results_v1/assembled/en_dev_eval_main/rag_small_rep0.jsonl": "238e4e63683bfa92c4db524a4058e8aa7002aff024d95a2cf255205dbc8978fa",
+    "experiments/astra/full_kb_core_20260915_v1/primary_results_v1/assembled/en_dev_eval_main/rag_small_rep1.jsonl": "e7fce285268a68774e4797deb3c1fe70892dc57660ba6c6f0d333c124979229d",
+    "experiments/astra/full_kb_core_20260915_v1/primary_results_v1/assembled/en_dev_eval_main/rag_small_rep2.jsonl": "61bab2ecc17f28d95e2d991aba954e849d24493ee090e9db9aeae1839d40092c",
+    "experiments/astra/full_kb_core_20260915_v1/primary_results_v1/complete.json": "052b1c2163d00a46e8c99f342b9524967ff0443f22161e387bb7aa5b011a2aeb",
+    "experiments/astra/full_kb_core_20260915_v1/primary_results_v1/results.json": "b0feaf7830acf5a1f70ad85f05803f658ce24004680ceddc1043c967bfc2324f",
+    "experiments/astra/full_kb_core_20260915_v1/retrieval_v1/full/complete.json": "ed318274c0b7476c72a3db5888a55d750b0c0c35d779d4cfd38e2736ab3d1219",
+    "experiments/astra/full_kb_core_20260915_v1/retrieval_v1/full/prompts.jsonl": "ab851c042a1b33dc460c0d2fd60bb7839feb24b3a1d3d4779c5805c3528cc221",
+    "experiments/astra/full_kb_core_20260915_v1/retrieval_v1/plan.json": "c86b65e3375fd8f32b11455a79c9bfb738f1de9ab938e3d726c66ae855480d35",
+    "experiments/astra/full_kb_core_20260915_v1/retrieval_v1/small/complete.json": "50b2ac31e46ba164109d0e81103cccd53a5b7a2a87ddb3cb16c9fa0d6f93702e",
+    "experiments/astra/full_kb_core_20260915_v1/retrieval_v1/small/prompts.jsonl": "f31ac7def4c61accd735c2b3151ecc22047e3032d61ba935b879f7a12dc5e009",
+    "experiments/astra/full_kb_core_20260915_v1/secondary_results_v2/en_dev_eval_targets/assembled/rag_full_rep0.jsonl": "8315fb00261c051d21c5d94130aa7b899b286bf0206a5830704da77af4787651",
+    "experiments/astra/full_kb_core_20260915_v1/secondary_results_v2/en_dev_eval_targets/assembled/rag_full_rep1.jsonl": "5b38e1254aed5fc47958a26d67208aec0745ad876b25ffb1546e6c82b0f0332f",
+    "experiments/astra/full_kb_core_20260915_v1/secondary_results_v2/en_dev_eval_targets/assembled/rag_full_rep2.jsonl": "5f5603468cc9396fc21c993eba5268cf69d200888a2415e69f81320c570d95e6",
+    "experiments/astra/full_kb_core_20260915_v1/secondary_results_v2/en_dev_eval_targets/assembled/rag_small_rep0.jsonl": "dea900c285d4ba01abb221e5ab319c8f4a13dbabf9bd4d9894ed0998faec0c82",
+    "experiments/astra/full_kb_core_20260915_v1/secondary_results_v2/en_dev_eval_targets/assembled/rag_small_rep1.jsonl": "d7dddd456e2331f6ce8b234815c1afe3c70837d07be2aef588301d674878d7f4",
+    "experiments/astra/full_kb_core_20260915_v1/secondary_results_v2/en_dev_eval_targets/assembled/rag_small_rep2.jsonl": "f314838b0b5a03d604db2ecf907d5efa848aea99b6cef6d56ab98b850fa327bd",
+    "experiments/astra/full_kb_core_20260915_v1/secondary_results_v2/en_dev_eval_targets/complete.json": "918216cda8b14a7d5cab9e7986e4390ed31f99bb24b01e484dc74f44f330d3be",
+    "experiments/astra/full_kb_core_20260915_v1/secondary_results_v2/en_dev_eval_targets/results.json": "76a317225209c59d542a48f9251196a7d4ba5653786227b3e87ddbfd2b334401",
+    "experiments/astra/full_kb_core_20260915_v1/secondary_results_v3/de_dev_eval/assembled/rag_full_rep0.jsonl": "d8077ab46e7b759f3504d126ee6f66bf2523bc53b15247d4da8138945fbcfecb",
+    "experiments/astra/full_kb_core_20260915_v1/secondary_results_v3/de_dev_eval/assembled/rag_full_rep1.jsonl": "6e29939a3696c63f3cadf20886c7b0ff4a73ee0fb144f65afdb1e0aec8fdd745",
+    "experiments/astra/full_kb_core_20260915_v1/secondary_results_v3/de_dev_eval/assembled/rag_full_rep2.jsonl": "ad01b7b5fbfc059c104bcf90a5adffd9bbc775a4b62560b206e362acdcf649a1",
+    "experiments/astra/full_kb_core_20260915_v1/secondary_results_v3/de_dev_eval/assembled/rag_small_rep0.jsonl": "51c461251920aef48ca6a57deea04838d1070ac644f615c86208f26653f4ff61",
+    "experiments/astra/full_kb_core_20260915_v1/secondary_results_v3/de_dev_eval/assembled/rag_small_rep1.jsonl": "c1fb66f78ca43cca01e228e170f4f572c3b2240c4b8392fb319cc9afa4163726",
+    "experiments/astra/full_kb_core_20260915_v1/secondary_results_v3/de_dev_eval/assembled/rag_small_rep2.jsonl": "2a67e32988beedbe1585658908df740b1f2243cb96b36723a9178f336114d964",
+    "experiments/astra/full_kb_core_20260915_v1/secondary_results_v3/de_dev_eval/complete.json": "d6ddbc4f20d768f7a3df46ea6efa1083b77a2b0d0b7d2600b3314cc7a8ebb116",
+    "experiments/astra/full_kb_core_20260915_v1/secondary_results_v3/de_dev_eval/results.json": "624263a5b8f9720baf8780323bec2e0073f4d3d1881cfe0234765d2b1a6f0c0b",
+    "experiments/astra/full_kb_core_20260915_v1/secondary_results_v4/en_dev_eval_sq3_types/assembled/rag_full_rep0.jsonl": "ce284a443a7a9a44a3b4de26426bc07766e1d38a1b79398fc739204aa3138f54",
+    "experiments/astra/full_kb_core_20260915_v1/secondary_results_v4/en_dev_eval_sq3_types/assembled/rag_full_rep1.jsonl": "299dbc1b2e92155f6f9e32b77bced3b7452dc739ec26b03b0c06cbebfcbbc656",
+    "experiments/astra/full_kb_core_20260915_v1/secondary_results_v4/en_dev_eval_sq3_types/assembled/rag_full_rep2.jsonl": "48a881bc6b8b8bf1eed99924d5723d1aff19ee8afc696638eaaf6c5a8665ddcd",
+    "experiments/astra/full_kb_core_20260915_v1/secondary_results_v4/en_dev_eval_sq3_types/assembled/rag_small_rep0.jsonl": "ddf71f27c87b8d88cb66c5370b084fafe4abbcddee6dd489fdb1cf4680a255d5",
+    "experiments/astra/full_kb_core_20260915_v1/secondary_results_v4/en_dev_eval_sq3_types/assembled/rag_small_rep1.jsonl": "8db96b4df592b8c29f61f8c3485113c5c77182e096668b83963544c9e3b5cb9e",
+    "experiments/astra/full_kb_core_20260915_v1/secondary_results_v4/en_dev_eval_sq3_types/assembled/rag_small_rep2.jsonl": "4430c263bfac432b43b3e59a1b109b20fa75349675aa0549fbfb90cef6d2e63d",
+    "experiments/astra/full_kb_core_20260915_v1/secondary_results_v4/en_dev_eval_sq3_types/complete.json": "da113d7a38ffc5504044a4d8fc35755057d13017c6f7b8415df67319a3a2d3df",
+    "experiments/astra/full_kb_core_20260915_v1/secondary_results_v4/en_dev_eval_sq3_types/results.json": "51b9a92ea3e2445a829dec8aaf0ed3806c25df48db5bed48cb79d9b42ffc0666",
+    "experiments/astra/full_kb_core_20260915_v1/secondary_results_v4/en_dev_eval_types/assembled/rag_full_rep0.jsonl": "14dd0a36a5977420d72a39fe7f601123c55330e7829ba1edafb45b640500cfc9",
+    "experiments/astra/full_kb_core_20260915_v1/secondary_results_v4/en_dev_eval_types/assembled/rag_full_rep1.jsonl": "6708df68685d7a02f518fd34424e3ef049e5755ddca2c1317986b8ecb235aedb",
+    "experiments/astra/full_kb_core_20260915_v1/secondary_results_v4/en_dev_eval_types/assembled/rag_full_rep2.jsonl": "c7b5cc344a51242c132845df62723a36ddc599cde90759191d6d0d30df9f0c6e",
+    "experiments/astra/full_kb_core_20260915_v1/secondary_results_v4/en_dev_eval_types/assembled/rag_small_rep0.jsonl": "f067fb1fe629d4b5452a973bdf666c14809573fd5c621a624961653e7b5c1848",
+    "experiments/astra/full_kb_core_20260915_v1/secondary_results_v4/en_dev_eval_types/assembled/rag_small_rep1.jsonl": "460bd9c10f9485085bc1294d675b8f9ff2f4eb6e55df82f3b89796a59b57effc",
+    "experiments/astra/full_kb_core_20260915_v1/secondary_results_v4/en_dev_eval_types/assembled/rag_small_rep2.jsonl": "7a8627f2e7fc590fc1a87e500fcd8066ab76d66ea20b87310df1579a043eb442",
+    "experiments/astra/full_kb_core_20260915_v1/secondary_results_v4/en_dev_eval_types/complete.json": "821a32f51a2c5b67b752f7fc782c71838f507565ec3168c37bd0aa2c6ee4b33d",
+    "experiments/astra/full_kb_core_20260915_v1/secondary_results_v4/en_dev_eval_types/results.json": "cab5c4b5288da5d716f94152eb5e80e6a1e3ad03204827b9a94cd1dadb9b2975",
+    "experiments/astra/full_kb_core_20260915_v1/severity_results_v1/assembled/rag_full_rep0.jsonl": "6a6e6dd6b5d96d82b85ce2e07440703869c87fa16acc0fc2f82a7c6f2a9303ea",
+    "experiments/astra/full_kb_core_20260915_v1/severity_results_v1/assembled/rag_full_rep1.jsonl": "4a97d9bf3cf28a4a57ad3cf0876d485909b350d4b7e99a0b74d9d9a7687a8c20",
+    "experiments/astra/full_kb_core_20260915_v1/severity_results_v1/assembled/rag_full_rep2.jsonl": "b556dfde462f458339ab7f11147d2a5eb4083873921aa0850a8093133346b7c2",
+    "experiments/astra/full_kb_core_20260915_v1/severity_results_v1/assembled/rag_small_rep0.jsonl": "29883597dde1909b72978537d29bfc167d423ec065b7ca7172dfc9cddc2f8a9b",
+    "experiments/astra/full_kb_core_20260915_v1/severity_results_v1/assembled/rag_small_rep1.jsonl": "83b238d7b13419f0db5c29aaa9e446854dfbe686422933055d05143c15d86d82",
+    "experiments/astra/full_kb_core_20260915_v1/severity_results_v1/assembled/rag_small_rep2.jsonl": "94579e424786e9ff75927c2835c4a6525479495984fd6ab1072ef2c15a53852b",
+    "experiments/astra/full_kb_core_20260915_v1/severity_results_v1/complete.json": "a2a666e41701fb946d6f0c2f4b96185393f06eb3b1d36188c60265ec84a3bd89",
+    "experiments/astra/full_kb_core_20260915_v1/severity_results_v1/results.json": "36be97c8043d1b6d022e961b9eee6de17dbf3e49470c6c68c22dce381f66d0fb",
+    "experiments/astra/sq2_retrieved_label_vote_20261001_v1/ANALYSIS_PROTOCOL.md": "d0d69de42707710465b03617e32d067e5b3455095a75ffca4fa7fe7f4740941e",
+    "experiments/astra/sq2_retrieved_label_vote_20261001_v1/development/tests_9d547be1ab28fc7ded4fd5867f5da1f9090591af1cf91c7d7fcf87fe2c738f2e.json": "98f86902155ecab3570ead5eaa63c72cc12d1375529f15d4f3f696c7188138d9",
+    "experiments/astra/sq2_retrieved_label_vote_20261001_v1/frozen_inputs.json": "4b9f85de5d93fb02f5d60ba4076c836b4c2054106e335fe005303aaa452e6e03",
+    "experiments/astra/sq3_full_kb_taxonomy_20261001_v1/clusters.json": "dc6cd86d1b7ab1a182ec1f8fa5388b0f3ec3e3355ebf24d5b42235c401e06efc",
+    "scratch/analysis/astra_core_api_v2.py": "b848d2bd4fe9b01dfc68673974ced7ca37d7b76db2730547f882901c731a9162",
+    "scratch/analysis/astra_core_batch_v1.py": "de058636266d992f82bcf0067690146f6418fc99f0abf6d19dca37da4f374539",
+    "scratch/analysis/astra_core_scoring_v1.py": "c90c5b23f068fccaca46e89d4acae8d3d8083a78b2e4572df9887de06a6a3683",
+    "scratch/analysis/astra_sq2_label_vote_v1.py": "9d547be1ab28fc7ded4fd5867f5da1f9090591af1cf91c7d7fcf87fe2c738f2e"
+  },
+  "inputs": 1295,
+  "interval": "Exploratory pointwise 95%, 14 comparisons; no multiple-comparison confirmatory claims.",
+  "labels": {
+    "hate": [
+      "not_hate",
+      "hate"
+    ],
+    "hate_type": {
+      "explicit": {
+        "definition": "Openly hateful; slurs or direct attacks."
+      },
+      "grievance": {
+        "definition": "Frames the in-group as victims of the targeted group (e.g. white grievance)."
+      },
+      "incitement": {
+        "definition": "Calls for or glorifies violence or hateful action against the group."
+      },
+      "inferiority": {
+        "definition": "Claims the group is inferior, subhuman, or of less worth."
+      },
+      "irony": {
+        "definition": "Uses sarcasm, jokes, or irony to demean the group."
+      },
+      "stereotyping": {
+        "definition": "Attributes negative characteristics to the whole group, incl. hateful misinformation."
+      },
+      "threatening": {
+        "definition": "Threatens or intimidates the group or its members."
+      }
+    },
+    "legal": {
+      "incitement_public_peace": {
+        "definition": "The text publicly calls for criminal offences, threatens serious crimes, incites hatred or violence against a national, racial, religious or ethnic group, glorifies violence, or approves of or rewards serious crimes. Includes Volksverhetzung, the German provision most directly concerned with hate speech. A call must be concrete: the act, and ideally the time, place or victim, should be identifiable. German Criminal Code sections 111, 126, 130, 131, 140.\n"
+      },
+      "insult_defamation": {
+        "definition": "The text insults a person or a legally recognised collective, spreads a damaging claim that is not demonstrably true, or abuses a religious or ideological community over its beliefs. Statements about public figures are judged more permissively than statements about private individuals. German Criminal Code sections 166, 185, 186."
+      },
+      "propaganda": {
+        "definition": "The text distributes propaganda material, or uses symbols, slogans, or greetings of an organisation ruled unconstitutional in Germany, particularly content promoting a former National Socialist organisation. Examples include banned party slogans and coded references to them. German Criminal Code sections 86 and 86a.\n"
+      }
+    },
+    "severity": {
+      "high": {
+        "definition": "Extremely hostile: the most intense hate, including incitement, threats, or calls for violence, as well as the most severe degradation.\n"
+      },
+      "low": {
+        "definition": "Hateful, but comparatively mild in intensity: insults, slurs, or derogatory remarks that demean a protected group without extreme hostility.\n"
+      },
+      "medium": {
+        "definition": "Strongly hostile: heavy or repeated slurs and clearly degrading language directed at a protected group.\n"
+      }
+    },
+    "target_group": {
+      "disability": {
+        "definition": "The text targets people because of a physical or mental disability.\n"
+      },
+      "gender": {
+        "definition": "The text targets people because of their gender, including misogyny and attacks on trans people.\n"
+      },
+      "national_origin": {
+        "definition": "The text targets people because of their nationality, immigration or refugee status.\n"
+      },
+      "other": {
+        "definition": "The text targets a protected group not listed above, for example people singled out by age, veteran or military status, caste, socioeconomic class or poverty, homelessness, immigration detention status, body size or physical appearance, or occupation. Use this label only when a protected group is clearly identified and none of the specific labels apply.\n"
+      },
+      "race": {
+        "definition": "The text targets people because of their race, skin colour, or ethnicity, e.g. Black, Asian, Hispanic, Arab, or white people as a group.\n"
+      },
+      "religion": {
+        "definition": "The text targets people because of their religion or belief, e.g. Muslims, Jews, Christians, Hindus.\n"
+      },
+      "sexual_orientation": {
+        "definition": "The text targets people because of their sexual orientation, e.g. gay, lesbian, bisexual people.\n"
+      }
+    }
+  },
+  "original_results": {
+    "de_dev_eval": "experiments/astra/full_kb_core_20260915_v1/secondary_results_v3/de_dev_eval/results.json",
+    "de_legal_dev_eval": "experiments/astra/full_kb_core_20260915_v1/primary_results_v1/results.json",
+    "en_dev_eval_main": "experiments/astra/full_kb_core_20260915_v1/primary_results_v1/results.json",
+    "en_dev_eval_severity": "experiments/astra/full_kb_core_20260915_v1/severity_results_v1/results.json",
+    "en_dev_eval_sq3_types": "experiments/astra/full_kb_core_20260915_v1/secondary_results_v4/en_dev_eval_sq3_types/results.json",
+    "en_dev_eval_targets": "experiments/astra/full_kb_core_20260915_v1/secondary_results_v2/en_dev_eval_targets/results.json",
+    "en_dev_eval_types": "experiments/astra/full_kb_core_20260915_v1/secondary_results_v4/en_dev_eval_types/results.json"
+  },
+  "pools": [
+    "full",
+    "small"
+  ],
+  "source_sha256": "9d547be1ab28fc7ded4fd5867f5da1f9090591af1cf91c7d7fcf87fe2c738f2e",
+  "status": "frozen_before_neighbour_prediction_scores",
+  "subsets": [
+    "en_dev_eval_main",
+    "de_legal_dev_eval",
+    "en_dev_eval_sq3_types",
+    "en_dev_eval_targets",
+    "en_dev_eval_severity",
+    "de_dev_eval",
+    "en_dev_eval_types"
+  ]
+}

@@ -1,0 +1,90 @@
+{
+  "calendar_days_to_target": 26,
+  "created_utc": "2026-10-20T13:59:29.455603+00:00",
+  "deadline_scope_decision_pending": true,
+  "experiment_stop_target": "2026-11-15",
+  "forecast_limits": [
+    "Planning scenarios scaled from the prior 8–10-day transfer estimate, not measured study-specific runtimes or confidence intervals.",
+    "The running study's complete budget is included, not a live remaining-call count.",
+    "Service speed, repairs, input lengths, local audits and interruptions differ.",
+    "Scientific reviews, local training and human work do not become completed by this calculation."
+  ],
+  "new_classifier_fits_required_for_DEV_comparison": 0,
+  "new_embeddings": 0,
+  "new_model_calls_by_this_planning_step": 0,
+  "new_training_fits": 0,
+  "next_available_SQ3_task": "Supporting paired classifier-versus-RAG update analysis on the 675 already completed DEV inputs, with existing 38 fits; principal broad-transfer contrasts remain pending.",
+  "planned_Qwen_budgets_including_running_full_budget": {
+    "broad_full_small_zero_unstarted": 583929,
+    "broader_correction_transfer_running": 567288,
+    "matched_information_unstarted": 110097,
+    "successive_simulated_rounds_unstarted": 777672
+  },
+  "planned_total_calls": 2038986,
+  "planning_date": "2026-10-20",
+  "rough_all_four_days": [
+    28.75415661886026,
+    35.94269577357532
+  ],
+  "rough_proportional_days": {
+    "broad_full_small_zero_unstarted": [
+      8.234674451072472,
+      10.29334306384059
+    ],
+    "broader_correction_transfer_running": [
+      8.0,
+      10.0
+    ],
+    "matched_information_unstarted": [
+      1.5526081990100267,
+      1.9407602487625333
+    ],
+    "successive_simulated_rounds_unstarted": [
+      10.966873968777763,
+      13.708592460972204
+    ]
+  },
+  "running_attempt_start_receipts": [
+    {
+      "path": "experiments/astra/sq3_transfer_20261012_v1/execution/live/transfer/stages/transfer_01/attempt_1792502995919164300/start.json",
+      "sha256": "6c5f62813962f1f7cde7886078bc27ce409c43abb4ffb6faddb1c0ffb3750594",
+      "start": {
+        "mode": "live",
+        "plan_sha256": "ca08393271cfe2461966376daebe45d5d156dcf0acc38f4ce0e9f480f8a2ed5d",
+        "stage": "transfer_01",
+        "started_utc": "2026-10-20T13:29:55.919182+00:00",
+        "study": "transfer"
+      }
+    }
+  ],
+  "running_execution_plan_sha256": "ca08393271cfe2461966376daebe45d5d156dcf0acc38f4ce0e9f480f8a2ed5d",
+  "running_job_modified": false,
+  "running_predictions_read_or_scored": 0,
+  "scientific_plan_or_scope_changed": false,
+  "sources": {
+    "Thesis_Log/astra_full_handover_20261014_v1.md": "80ad791a3dcd635e99b72b441df4777cddcae2299f3a1688fb548d062fcdc8b5",
+    "Thesis_Log/astra_result/astra_remaining_work_before_writing_20261020_v61.md": "c573bdb1d00966aa420ab48ddf2decf6d9e8bbdb4e604fa3fedae40ce3973e8a",
+    "Thesis_Log/astra_result/astra_sq2_short_training_preparation_20261012_v1.md": "d6a9a453d58c9a93c7e4facadd1b67fe7cf7e3f839fa6e7a72dfeb1e5c790de8",
+    "Thesis_Log/astra_result/astra_sq3_human_feedback_results_20261020_v1.md": "b3da5c8cdc3914044cf6d22461f6d10d944b3c3a95d31526ef8e2e17f4759845",
+    "Thesis_Log/astra_result/astra_sq3_reserved_final_results_20261020_v1.md": "c4ac38f778581f4c48c817067f96d0ca505c35d5b302f4542261a6ed51999e83",
+    "Thesis_Log/astra_result/astra_sq3_reserved_part8_resources_20261020_v1.md": "0f60b6ac4d8b58e982a335db9109ce2f10b0ee45f489cf4cb6e84ae853385d40",
+    "experiments/astra/sq3_iterative_20261012_v1/STUDY_PROTOCOL.md": "7e3e0370cb4377b567b5b9b2290920660938153eb871d764c073765546d2ca6e",
+    "experiments/astra/sq3_linear_static_review_20261014_v1/review.json": "97f9395d5f40c1fac845f80c39e8ba554102c5758add4c906cd6a55bc651f672",
+    "experiments/astra/sq3_linear_update_20261012_v1/STUDY_PROTOCOL.md": "e4ee7c6cc6244408e2068c0df9b058ec65dd9f44955c63a05c412800313fbe63",
+    "experiments/astra/sq3_transfer_20261012_v1/STUDY_PROTOCOL.md": "a8924314f7888d1a61a1b57f7f976520811405f90222bbcd81d5e310114586a2",
+    "experiments/astra/sq3_transfer_20261012_v1/execution/plan.json": "ca08393271cfe2461966376daebe45d5d156dcf0acc38f4ce0e9f480f8a2ed5d",
+    "experiments/astra/sq3_transfer_20261012_v1/scientific_plan_v1.json": "49aac548299953ca9cb5828b7c0272355ff3ed5dee0347f043f7e454d1f64172"
+  },
+  "static_classifier_fits": 38,
+  "status": "dependency_and_schedule_review_only_no_new_scientific_results",
+  "target_provenance": "User answered 15 November when asked for the date to stop experiments.",
+  "unstarted_calls": 1471698,
+  "writer_owned_files_edited": false,
+  "writer_sources_read_only": {
+    "C:\\Users\\ajayt\\Desktop\\Thesis\\Thesis_Final\\sections\\Thesis_Chapters\\Introduction.tex": "87bb937e4dcc3830ae2b70703c9e3ff6a43526207fd3c9176d1b11840a1f2258",
+    "C:\\Users\\ajayt\\Desktop\\Thesis\\Thesis_Final\\sections\\Thesis_Chapters\\Results_SQ3.tex": "76be2e4a87ecffe01f0812a98a4e9d293b0c9a56c691c94f689a4cbfdab536ec",
+    "C:\\Users\\ajayt\\Desktop\\Thesis\\Thesis_Final\\writing_status.md": "f2223c4db435e97f2dfe49996a4b09cfff69aa6532bcf80d688197364d495588"
+  },
+  "writing_and_order_preference": "Ajay now wants staged writing: finish the SQ3 analysis available without another Qwen queue, then ask the writing chat to integrate reviewed findings while outstanding studies stay pending. Proceed to independent local experiments after readiness/resource checks, and add later reviewed results in separate writing updates. This supersedes waiting for final expanded SQ3 synthesis before any SQ3 writing and the blanket wait for all SQ3 before independent SQ2 work. It does not authorize a second Qwen queue or cancellation/reduction of frozen studies.",
+  "writing_chat_contacted": false
+}

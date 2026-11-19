@@ -1,0 +1,80 @@
+name: hatecheck_E_r2
+description: >
+  HATECHECK, EXAMPLES-ONLY ABLATION at 0/0/5. Replicate 2 of three. Retrieved
+  labelled examples at the frozen budget of 5 with MMR, no definitions, no
+  guidelines.
+
+  WHY THIS IS THE CLEANEST RETRIEVAL CONTRAST IN THE THESIS.
+  examples_only - few_shot is five RETRIEVED examples against five STATIC
+  ones, with no definitions and no guidelines riding along. Every existing
+  rag - few_shot number in this thesis carries the abstract buckets as a
+  confound. This one does not, and it is measured on 1,165 purpose-built
+  false-positive traps.
+
+  AND few_shot IS NOT AN INERT CONTROL, measured 2026-08-27. On the uncovered
+  block few_shot - zero_shot is -0.0320 at 2.20x floor with a bootstrap CI of
+  [-0.0594, -0.0096]; on definition_covered it is -0.0341 at 1.44x with CI
+  [-0.0656, -0.0052]. Both clear both tests. Five static, uniformly hateful,
+  input-unrelated examples REDUCE false positives on the blocks where the
+  input names a group neutrally or targets an object. Whole-suite it reads
+  -0.0138 inside the floor, which is why every prior analysis called this arm
+  null.
+
+  MEASURED BEFORE THIS RUN, from hatecheck_probe_mock. The knowledge base is
+  204/320 = 63.75% hateful examples. Retrieval returns 90.4% hateful to
+  guideline_covered input, 90.9% to definition_covered, 83.8% to uncovered and
+  92.7% to hateful; all five slots are hateful on 61.8% of guideline_covered
+  items. Retrieval barely distinguishes gold-hateful from gold-non-hateful
+  input. That is Phase 4 Finding E, and k_examples_neg was specced as its fix
+  and deliberately never built.
+
+  PRE-REGISTERED.
+
+  E1. examples_only - zero_shot is NEGATIVE on the non-hateful FP rate and
+      carries most of rag's measured -0.0479. SQ1 found labelled examples are
+      the only kind that moves hate_type; this tests the same claim on the
+      gate. FALSIFIED by a null, or by definitions_only carrying more.
+
+  E2. examples_only - few_shot is NEGATIVE on guideline_covered and NULL on
+      uncovered and definition_covered, mirroring rag - few_shot, which
+      cleared both tests on guideline_covered at -0.0482 and cleared neither
+      elsewhere. If E2 holds, retrieval's advantage over static examples is
+      confined to the hard traps (counter-speech, reclaimed slurs, negation)
+      and the easy ones are solved by having any hateful examples at all.
+      FALSIFIED by a uniform effect across blocks, or by a reversal.
+
+  E3. The caution-text confound is NOT removed here and is stated rather than
+      fixed. few_shot renders STATIC_EXAMPLES_CAUTION, examples_only renders
+      EXAMPLES_CAUTION, and the latter is the Finding E mitigation. Any
+      examples_only - few_shot difference confounds selection with caution
+      wording. This is baked into every rag - few_shot number in the thesis
+      and cannot be removed without moving prompt_version, which is frozen.
+
+  E4. examples_only should have FEWER schema repairs than few_shot. SQ1
+      measured 20.8 for rag against 95.0 for few_shot per 467 items, but on
+      HateCheck that ordering REVERSED: few_shot 0.131 repairs per item,
+      rag 0.152, zero_shot 0.162. E4 predicts the HateCheck ordering
+      persists, i.e. it predicts SQ1's ordering does NOT reproduce here.
+
+  Reporting, arm stamp and the [rag] constraint are as in hatecheck_D_r1.
+subset: en_hatecheck_eval
+arms: [rag]
+provider: peasec
+pinned_model: Qwen/Qwen3-VL-32B-Instruct
+temperature: 1.0
+allow_fallback: false
+n_votes: 3
+workers: 8
+gate_mapping: strict
+retrieval:
+  strategy: hybrid
+  k_definitions: 0
+  k_definitions_mode: flat
+  k_guidelines: 0
+  k_examples: 5
+  k_examples_feedback: 0
+  use_mmr: true
+  mmr_lambda: 0.7
+  mmr_pool_factor: 3
+  use_reranker: false
+  rrf_k: 60

@@ -1,0 +1,8 @@
+source_label,unified_label,note
+white_grievance,grievance,
+incitement,incitement,
+inferiority,inferiority,
+irony,irony,
+stereotypical,stereotyping,
+threatening,threatening,
+other,EXCLUDE,keep the record but no specific type -> hate_types=None

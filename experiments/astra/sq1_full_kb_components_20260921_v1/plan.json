@@ -1,0 +1,128 @@
+{
+  "analysis_sha256": "32f0e70a52208c74b087ca8866d806e075e1f7ac355cba69734f3f9250bee08a",
+  "arms_e_d_g": {
+    "d": [
+      0,
+      1,
+      0
+    ],
+    "dg": [
+      0,
+      1,
+      1
+    ],
+    "e": [
+      1,
+      0,
+      0
+    ],
+    "ed": [
+      1,
+      1,
+      0
+    ],
+    "edg": [
+      1,
+      1,
+      1
+    ],
+    "eg": [
+      1,
+      0,
+      1
+    ],
+    "g": [
+      0,
+      0,
+      1
+    ],
+    "none": [
+      0,
+      0,
+      0
+    ]
+  },
+  "bridge": "reference_rag",
+  "budget": {
+    "conditions": 9,
+    "decoder_repeats": 3,
+    "distinct_inputs": 1295,
+    "factorial_conditions": 8,
+    "fresh_predictions": 34965,
+    "max_logical_calls": 314685,
+    "max_physical_POSTs": 1573425,
+    "maximum_predictions_per_stage": 2700,
+    "ordinary_responses": 104895,
+    "prompt_payloads": 11655,
+    "stages": 13,
+    "votes_per_prediction": 3
+  },
+  "common_instruction": "## How to use the supplied context\nUse any supplied label definitions and annotation guidelines when judging the input. Labelled examples, when supplied, were retrieved by similarity to the input. They may all be hateful even when the input is not. Judge the input on its own terms; do not assign labels merely because it resembles an example.",
+  "created_utc": "2026-09-21T10:23:21.719522+00:00",
+  "environment": {
+    "packages": {
+      "PyYAML": "6.0.3",
+      "numpy": "2.5.0",
+      "pandas": "3.0.3",
+      "pyarrow": "24.0.0",
+      "pydantic": "2.13.4",
+      "python-dotenv": "1.2.2",
+      "requests": "2.34.2",
+      "urllib3": "2.7.0"
+    },
+    "python": "3.13.14"
+  },
+  "input_hashes": {
+    "Thesis_Log/astra_result/evidence/sq1_strategy_completion_20260921_v1.json": "c80421c370fbdc2f2cfe7dd42e7ee2a4297408f9f691b0ae379327df8e770475",
+    "Thesis_Log/astra_result/evidence/sq1_strategy_full_audit_20260920_v1.json": "25befd0770a23e031a6b1b816328973e49fe3aeed665e18b7817afb8fdac7023",
+    "data/processed/de_dev_eval.parquet": "3c161f54b61aa2f88d0c4b7f7824a0e2de2fa85febeda141f5e1f96a2f3e1e2e",
+    "data/processed/de_legal_dev_eval.parquet": "9c3b342c30389ff370f7ed0571f4b74193056b96dd660ce945b5fc0c499e5a65",
+    "data/processed/en_dev_eval_main.parquet": "14f015e2aed261441ac9ce5830a36b2425d1be01903f854a04e84241a7dea188",
+    "data/processed/en_dev_eval_severity.parquet": "6791cb5b55bbda49c513564b81ecc4c5e56b4edf2fa7602a8b4b3b1867e52554",
+    "data/processed/en_dev_eval_sq3_types.parquet": "b31a8cb28f0f4443bdae5489abc44dc80e43b5e4b308f4534d64ae61b130ffd1",
+    "data/processed/en_dev_eval_targets.parquet": "4aa17c9cbd3661718d14d9244a206d79a9d503d842af0159e924d61be0da9a49",
+    "data/processed/en_dev_eval_types.parquet": "54d5ebaf2731a4bf8d755118dc20ccbb5de3e11bdd9dc118add1b3010bb032a4",
+    "experiments/astra/full_kb_core_20260915_v1/api_execution_v1/scoring_plan.json": "5bccf0a19ddecd945f2e82cf017f57f2903c2756328f0ea498f42754b29ebfc2",
+    "experiments/astra/full_kb_core_20260915_v1/dev_inputs.jsonl": "d6c2de6631bf00e4d774961034c63de88b91a5c0ad3267a41734c1990e4ca36c",
+    "experiments/astra/full_kb_core_20260915_v1/kb/full/records.jsonl": "ae63f259519455154c1dcf617b8e649908416f2117b171fc27b0b1c37c3d3961",
+    "experiments/astra/sq1_full_kb_components_20260921_v1/PROTOCOL.md": "d097a8b547ebe1392f7c807807fe07198ac1abe614cce76bd11359d4475c9dba",
+    "experiments/astra/sq1_full_kb_components_20260921_v1/development/preparation_tests_passed.json": "7e75eb7dee9fdedf1b9775d916a0d233eeca0ee16e26fdb08a6befee23f32ef5",
+    "experiments/astra/sq1_full_kb_strategy_20260920_v1/api_execution_v1/plan.json": "a7b9d2649dc2a3fe41cc1413b07902fc5b9cefbf701c5f07868a77090954ed44",
+    "experiments/astra/sq1_full_kb_strategy_20260920_v1/completion_v1/complete.json": "2d378445f3b079463d330ecb12d87db3d184999c3cbfb3fa714296d9f306b2ac",
+    "experiments/astra/sq1_full_kb_strategy_20260920_v1/plan.json": "d22c3018572515d19943c598422ee91a8c1fe42af631d85efa17dcf7eacb6ad1",
+    "experiments/astra/sq1_full_kb_strategy_20260920_v1/retrieval_acceptance_v1.json": "074e03fdd94b321a40506e47e33e23cf638157686342341088e1d1acfe4a5d99",
+    "experiments/astra/sq1_full_kb_strategy_20260920_v1/runs/prepare/attempt_1789891834437014100/prompts.jsonl": "691189131b734178a21b15294f764623b96212d6b5ac9d7f758402175775ad7d"
+  },
+  "next": "Render every payload, independent matched-context audit; separately freeze/test one-stage API runner before user execution.",
+  "preservation": "New study files only. Old results/indexes/models/source, original logs and accepted strategy evidence untouched. No TEST/benchmarks, Priority3/adaptation or LaTeX. No API or credentials during offline preparation.",
+  "prompt_scope": "System, taxonomy/schema, target text and corrected TRAIN-label rendering unchanged. All eight factorial arms share COMMON_NOTE in the same first user-message position; the old examples caution is absent from them. Keep exact original full-RAG messages as ninth fresh bridge. This is a separate prompt-version intervention, not a silent change to main RAG.",
+  "question": "What do naturally retrieved examples, definitions and guidelines contribute under matched instruction wording and fixed record selection?",
+  "retrieval": "Use accepted first-pass hybrid contexts without reopening an index or retrieving again. Every retained bucket has identical records, metadata and order across arms/repeats. Remove only complete buckets. Budgets 2D/2G/5E or zero. No feedback, allocation change, label-aware selection, resampling or oracle.",
+  "reuse": "Reuse only audited source contexts, masks/labels, parser/voter/transport. All nine conditions receive fresh contemporaneously interleaved decoder repeats. Historical predictions are not extra repeats or controls.",
+  "scope_counts": {
+    "de_dev_eval": 150,
+    "de_legal_dev_eval": 175,
+    "en_dev_eval_main": 299,
+    "en_dev_eval_severity": 45,
+    "en_dev_eval_sq3_types": 467,
+    "en_dev_eval_targets": 56,
+    "en_dev_eval_types": 103
+  },
+  "source_hashes": {
+    "config/taxonomy.yaml": "02dabf77bc27bca61cb4d931429fd7e32046a83fea3ead6f7863420a6417c4c9",
+    "prompts/classify_v1.txt": "8e588db7c6d45e469f889d5d85500bdb0fdb563ddfad3722247b18a18af6d374",
+    "scratch/analysis/astra_core_api_v2.py": "b848d2bd4fe9b01dfc68673974ced7ca37d7b76db2730547f882901c731a9162",
+    "scratch/analysis/astra_core_batch_v1.py": "de058636266d992f82bcf0067690146f6418fc99f0abf6d19dca37da4f374539",
+    "scratch/analysis/astra_core_scoring_v1.py": "c90c5b23f068fccaca46e89d4acae8d3d8083a78b2e4572df9887de06a6a3683",
+    "scratch/analysis/astra_german_prompt.py": "a6f593767754bef417548765fc658510575c247f1dc0994bfc9a67ce76b158b6",
+    "scratch/analysis/astra_sq1_components_check_v1.py": "3c77c96e2d9ff6ebabe737889c695b9d8e486bc849aadc1f2924c50da8563e46",
+    "scratch/analysis/astra_sq1_components_prepare_v1.py": "e9125e566cd433a8ad4d975b343934ace679caa03ec269ee9ffd9f799d89bf16",
+    "scratch/analysis/test_astra_sq1_components_prepare_v1.py": "080a123da8908cae6f6ee376ad76e503c04ae68e93de5ffe7b2ea8b6f55f777b",
+    "src/hsrag/parse.py": "420118eff5fdb9152730eac9020e3ff4d03d042b801afcd3bf74bcf7b2dd8a94",
+    "src/hsrag/prompt.py": "3c9584f27c1451f0a0ca9ec155afa39d47cf6528011a85cfa4704b620b89603b",
+    "src/hsrag/schema.py": "4e121d33f9d3675a963dfa777564180d6a870b6af4484723e5c860eed6efaa19",
+    "src/hsrag/vote.py": "9cca2205f67a56d34d52498880482dcafd61a01353333d9063682bc570ffde27"
+  },
+  "source_replay_qualification": "Original strategy replay changed the hybrid prompt for en/implicit_hate-4207. Retain accepted first-pass context for every arm; all focal EN467 contexts were replay-exact. No retry-to-match or replay substitution. Inference conditions on fixed contexts.",
+  "status": "protocol_frozen_before_new_model_outputs"
+}

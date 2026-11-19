@@ -1,0 +1,155 @@
+{
+  "comparators": "Preserved BGE mean across its three fold settings; frozen-RoBERTa mean, archived original and fixed recipe/balancing/threshold controls supporting. Different randomization axes and selection costs remain explicit.",
+  "configurations": [
+    {
+      "epochs": 20,
+      "id": "l0_e20_u",
+      "learning_rate": 5e-06,
+      "loss": "unweighted"
+    },
+    {
+      "epochs": 20,
+      "id": "l0_e20_b",
+      "learning_rate": 5e-06,
+      "loss": "balanced"
+    },
+    {
+      "epochs": 60,
+      "id": "l0_e60_u",
+      "learning_rate": 5e-06,
+      "loss": "unweighted"
+    },
+    {
+      "epochs": 60,
+      "id": "l0_e60_b",
+      "learning_rate": 5e-06,
+      "loss": "balanced"
+    },
+    {
+      "epochs": 20,
+      "id": "l1_e20_u",
+      "learning_rate": 2e-05,
+      "loss": "unweighted"
+    },
+    {
+      "epochs": 20,
+      "id": "l1_e20_b",
+      "learning_rate": 2e-05,
+      "loss": "balanced"
+    },
+    {
+      "epochs": 60,
+      "id": "l1_e60_u",
+      "learning_rate": 2e-05,
+      "loss": "unweighted"
+    },
+    {
+      "epochs": 60,
+      "id": "l1_e60_b",
+      "learning_rate": 2e-05,
+      "loss": "balanced"
+    },
+    {
+      "epochs": 20,
+      "id": "l2_e20_u",
+      "learning_rate": 5e-05,
+      "loss": "unweighted"
+    },
+    {
+      "epochs": 20,
+      "id": "l2_e20_b",
+      "learning_rate": 5e-05,
+      "loss": "balanced"
+    },
+    {
+      "epochs": 60,
+      "id": "l2_e60_u",
+      "learning_rate": 5e-05,
+      "loss": "unweighted"
+    },
+    {
+      "epochs": 60,
+      "id": "l2_e60_b",
+      "learning_rate": 5e-05,
+      "loss": "balanced"
+    }
+  ],
+  "cutoffs": [
+    0.1,
+    0.2,
+    0.3,
+    0.4,
+    0.5,
+    0.6,
+    0.7,
+    0.8,
+    0.9
+  ],
+  "cv_neural_seeds": [
+    0,
+    1,
+    2
+  ],
+  "decisions": "Gate positive iff p>cutoff; fine label iff p>=cutoff; severity argmax in recorded label order. Non-hate clears every fine output.",
+  "evaluation": "Core970 + broader18275 English input identities; union19082. Prediction inputs contain text/identity only. Gold scoring occurs after every selection/final fit is locked.",
+  "exposure": "Exploratory follow-up motivated by earlier exposed DEV/TEST/HateCheck findings. TRAIN-only selection does not erase research exposure; selection OOF scores are not unbiased performance estimates.",
+  "families": [
+    "fixed_unweighted",
+    "fixed_balanced",
+    "tuned"
+  ],
+  "final_neural_seeds": [
+    10,
+    11,
+    12,
+    13,
+    14
+  ],
+  "final_refit": "All permitted rows per head; five new initialization/order seeds 10..14. Reuse identical selected head/config/seed jobs across families; no best-seed selection.",
+  "fixed_configs": {
+    "fixed_balanced": "l1_e20_b",
+    "fixed_unweighted": "l1_e20_u"
+  },
+  "fold_assignment": 42,
+  "fold_count": 5,
+  "heads": [
+    "hate",
+    "hate_type",
+    "target_group",
+    "severity"
+  ],
+  "loss": "Unweighted CE for hate/severity, BCE for multi-label. Balanced losses multiply unreduced terms by TRAIN-fold inverse class frequencies, then ordinary mean. Missing classes use unit observed-class weights, never inverse-zero.",
+  "model": "Pinned roberta-base; RobertaForSequenceClassification; original guarded tokenizer; max128; original two-logit gate, seven-logit fine heads, three-logit severity",
+  "numerical": "Deterministic algorithms required. Nonfinite forward loss/logits stop. Record skipped AMP steps; stop after >20 consecutive skips or no successful updates.",
+  "optimizer": {
+    "batch_size": 16,
+    "betas": [
+      0.9,
+      0.999
+    ],
+    "eps": 1e-08,
+    "fused": true,
+    "gradient_accumulation": 1,
+    "max_grad_norm": 1.0,
+    "name": "torch.optim.AdamW",
+    "schedule": "linear; horizon equals the candidate total optimizer-step budget",
+    "warmup_ratio": 0.1,
+    "weight_decay": 0.01
+  },
+  "precision": "FP32 parameters; FP16 CUDA autocast/GradScaler for training; FP32 standalone inference; TF32 disabled",
+  "primary": "Tuned/selected minus unchanged compact BGE: en_test hate/types, larger_dev targets/severity. Four-question family; 10000 paired text-cluster draws; 98.75% intervals conditional on final fits. Report neural seed spread separately.",
+  "resume": "One launcher lock. Completed job receipts/hashes verified and skipped. Incomplete fitting attempts retained, then that job restarts from pretrained weights. Inference resumes verified 512-row chunks; no remote requests.",
+  "scope": "English original147 only. No Qwen, KB edit, new humans, German fitting, extra pools, full-data linear fit or TF-IDF execution in this launcher.",
+  "selection": "Average the three per-neural-seed macro-F1 values on pooled held-fold TRAIN predictions, not predictions averaged as an ensemble. Select gate first in each family; select fine heads with that family/seed held-fold gate. Severity argmax. No per-label cutoff search.",
+  "storage": "CV models live in memory only; retain all CV logits/loss curves/receipts. Preserve up to60 unique final checkpoints (~30GiB), raw inference and source/selection hashes. Require45GiB free initially and8GiB before a fitting job.",
+  "support": "TRAIN-only labels with >=2 positives and >=2 negatives; keep unsupported labels in fitting/evaluation. Require nonempty folds and both gate classes. No evaluation labels in preparation/training/selection.",
+  "ties": "Higher mean score; then fewer epochs, smaller learning rate, unweighted loss, cutoff nearest .5, larger cutoff. Exact floating scores; deterministic order.",
+  "training_counts": {
+    "hate": 147,
+    "hate_type": 67,
+    "severity": 37,
+    "target_group": 60
+  },
+  "variants": "Each family has selected-cutoff and default-.5 outputs from exactly the same final weights. Tuned/default is a fixed-weights diagnostic, not separately selected at .5.",
+  "version": 1
+}

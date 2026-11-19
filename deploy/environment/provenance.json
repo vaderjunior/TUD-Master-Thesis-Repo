@@ -1,0 +1,199 @@
+{
+  "scope": "Original dependency-resolution environment and copied helper identities. Full original dumps are preserved with the cleanup review.",
+  "dependency_resolution_source": {
+    "original_path": "deploy/peasec_training_20261022_v1/dependency_resolution.json",
+    "sha256": "1404f94e44bfc92ab6d16b77b013ea7d521923a2d7899f0bcb1f9e36a50fd932",
+    "pip_version": "26.2.2",
+    "environment": {
+      "implementation_name": "cpython",
+      "implementation_version": "3.12.14",
+      "os_name": "nt",
+      "platform_machine": "AMD64",
+      "platform_release": "11",
+      "platform_system": "Windows",
+      "platform_version": "10.0.26200",
+      "python_full_version": "3.12.14",
+      "platform_python_implementation": "CPython",
+      "python_version": "3.12",
+      "sys_platform": "win32"
+    }
+  },
+  "training_helper_source": {
+    "original_path": "deploy/peasec_training_20261022_v1/reference/function_provenance.json",
+    "sha256": "0a364225e1d9487400f9489e68b50b7d5454f98c1da25a078fda811ccdb6d6f0",
+    "functions": [
+      {
+        "function": "require",
+        "source": "scratch/analysis/astra_roberta_tuning_common_v1.py",
+        "source_sha256": "7a67a3c676e6bb85809ca20d7645c74789c5008d0064cc9e7c7abdb3f6d0c03e",
+        "ast_sha256": "9eab2eb985f07404f0ba481fb7d9e2159671af8457914290e9257fc1c4daeea1"
+      },
+      {
+        "function": "utc",
+        "source": "scratch/analysis/astra_roberta_tuning_common_v1.py",
+        "source_sha256": "7a67a3c676e6bb85809ca20d7645c74789c5008d0064cc9e7c7abdb3f6d0c03e",
+        "ast_sha256": "4661438a10b02271be118819c6a4e7db84f7235631f24cc3268ef38012911851"
+      },
+      {
+        "function": "ready",
+        "source": "scratch/analysis/astra_roberta_tuning_common_v1.py",
+        "source_sha256": "7a67a3c676e6bb85809ca20d7645c74789c5008d0064cc9e7c7abdb3f6d0c03e",
+        "ast_sha256": "2c2a6829c9dcf55102c373bfc7183a88bfb1f69c5addd780b7e25579dfa12251"
+      },
+      {
+        "function": "encoded",
+        "source": "scratch/analysis/astra_roberta_tuning_common_v1.py",
+        "source_sha256": "7a67a3c676e6bb85809ca20d7645c74789c5008d0064cc9e7c7abdb3f6d0c03e",
+        "ast_sha256": "9a2b40b57829cb9f376b71bfc54097661ce7b21f422a3fd056eb9c8131c3d66d"
+      },
+      {
+        "function": "signature",
+        "source": "scratch/analysis/astra_roberta_tuning_common_v1.py",
+        "source_sha256": "7a67a3c676e6bb85809ca20d7645c74789c5008d0064cc9e7c7abdb3f6d0c03e",
+        "ast_sha256": "a76f6f6ccd781e86e041c18fec8660b27ce0ca1df7b0108c8240d62a3ed2c3b6"
+      },
+      {
+        "function": "sha",
+        "source": "scratch/analysis/astra_roberta_tuning_common_v1.py",
+        "source_sha256": "7a67a3c676e6bb85809ca20d7645c74789c5008d0064cc9e7c7abdb3f6d0c03e",
+        "ast_sha256": "2fe3bff7d9f6970c3c864a9af3339c26f055f0371350c87c31335864d6124c36"
+      },
+      {
+        "function": "read",
+        "source": "scratch/analysis/astra_roberta_tuning_common_v1.py",
+        "source_sha256": "7a67a3c676e6bb85809ca20d7645c74789c5008d0064cc9e7c7abdb3f6d0c03e",
+        "ast_sha256": "733bb36ebbbc42387b9d881207901891ea5aedfbd2caa50f69ab4998959113ff"
+      },
+      {
+        "function": "class_weights",
+        "source": "scratch/analysis/astra_roberta_tuning_common_v1.py",
+        "source_sha256": "7a67a3c676e6bb85809ca20d7645c74789c5008d0064cc9e7c7abdb3f6d0c03e",
+        "ast_sha256": "2579cd3929b8804af838246d53d6ff47ec345a0c4717dff64ee635d3e5a5b1a1"
+      },
+      {
+        "function": "split",
+        "source": "scratch/analysis/astra_stageb_common_v1.py",
+        "source_sha256": "f8a1c44983e0fe77181a3c4491b84ba81d7fbcbeb80a4cf4b568bc5b179c7ff9",
+        "ast_sha256": "2f8638349cdff59303dc39dd9c1e6332735b189764a366a3da738c32b2ddd967"
+      },
+      {
+        "function": "setup",
+        "source": "scratch/analysis/astra_stageb_train_v1.py",
+        "source_sha256": "d46e974c9c26b52ebed0ce3202acc4f95bd9faa12c422d4c1a8c9673d2435af2",
+        "ast_sha256": "4e547663a05f6ff6f56d9ea3a0f0bdc7722b740f76282cb914db406c6b080e96"
+      },
+      {
+        "function": "load",
+        "source": "scratch/analysis/astra_stageb_train_v1.py",
+        "source_sha256": "d46e974c9c26b52ebed0ce3202acc4f95bd9faa12c422d4c1a8c9673d2435af2",
+        "ast_sha256": "d311100e1469df8da9e24a5b9f838429a9c34ebfefb1b228f3129dcb54a83436"
+      },
+      {
+        "function": "loss_value",
+        "source": "scratch/analysis/astra_stageb_train_v1.py",
+        "source_sha256": "d46e974c9c26b52ebed0ce3202acc4f95bd9faa12c422d4c1a8c9673d2435af2",
+        "ast_sha256": "e6ed1ddc598918aaaeac4ecec4aa675d0246d42a372056aa67183657270aa032"
+      },
+      {
+        "function": "tokens",
+        "source": "scratch/analysis/astra_stageb_train_v1.py",
+        "source_sha256": "d46e974c9c26b52ebed0ce3202acc4f95bd9faa12c422d4c1a8c9673d2435af2",
+        "ast_sha256": "881a48ad248ee4a19914ad5427041411e683ff1b74b6dd06e22a1057937baf5f"
+      },
+      {
+        "function": "batch",
+        "source": "scratch/analysis/astra_stageb_train_v1.py",
+        "source_sha256": "d46e974c9c26b52ebed0ce3202acc4f95bd9faa12c422d4c1a8c9673d2435af2",
+        "ast_sha256": "0ee9856c01aeb0060d04b70486eecf4e8c4ccf0dfefe9d684199ed026329533e"
+      },
+      {
+        "function": "infer",
+        "source": "scratch/analysis/astra_stageb_train_v1.py",
+        "source_sha256": "d46e974c9c26b52ebed0ce3202acc4f95bd9faa12c422d4c1a8c9673d2435af2",
+        "ast_sha256": "4aaef29a10bc07493bfb28614c4a7428a23aa3d13dc0a982f71b54f4097be60a"
+      },
+      {
+        "function": "split",
+        "source": "scratch/analysis/astra_stageb_train_v1.py",
+        "source_sha256": "d46e974c9c26b52ebed0ce3202acc4f95bd9faa12c422d4c1a8c9673d2435af2",
+        "ast_sha256": "856f12759b4de1e2da02620da661935cda67089bbd9ae67cad91726fce1bfaae"
+      },
+      {
+        "function": "parameter_fingerprint",
+        "source": "scratch/analysis/astra_stageb_train_v1.py",
+        "source_sha256": "d46e974c9c26b52ebed0ce3202acc4f95bd9faa12c422d4c1a8c9673d2435af2",
+        "ast_sha256": "0d1e740d68097aaaaee915db4c7b956f574ef6e8910108a86ce04fbee41869be"
+      },
+      {
+        "function": "train_attempt",
+        "source": "scratch/analysis/astra_stageb_train_v1.py",
+        "source_sha256": "d46e974c9c26b52ebed0ce3202acc4f95bd9faa12c422d4c1a8c9673d2435af2",
+        "ast_sha256": "08032b8880e622da77fc0a6e9bd303fecbba0855e83b6d29ede8ac99895403cf"
+      },
+      {
+        "function": "require",
+        "source": "scratch/analysis/astra_roberta_tokenizer_v1.py",
+        "source_sha256": "f9d326043c35782367a4a08048d1681a503076fcdc07d258664ba3c5a949de3b",
+        "ast_sha256": "fa6189dd8406ae475f549a6f1c6dee707a53a09c288a4b23b48c635c59652b97"
+      },
+      {
+        "function": "fingerprint",
+        "source": "scratch/analysis/astra_roberta_tokenizer_v1.py",
+        "source_sha256": "f9d326043c35782367a4a08048d1681a503076fcdc07d258664ba3c5a949de3b",
+        "ast_sha256": "1818ce85b35d463a482ba96cce8fe38c8c29b036553d11e47127a421da3edc9f"
+      },
+      {
+        "function": "semantics",
+        "source": "scratch/analysis/astra_roberta_tokenizer_v1.py",
+        "source_sha256": "f9d326043c35782367a4a08048d1681a503076fcdc07d258664ba3c5a949de3b",
+        "ast_sha256": "ec20f9a3ba33837eab2859f8e4397c7fc695bd9cba1254f41f273ea59e274160"
+      },
+      {
+        "function": "reference",
+        "source": "scratch/analysis/astra_roberta_tokenizer_v1.py",
+        "source_sha256": "f9d326043c35782367a4a08048d1681a503076fcdc07d258664ba3c5a949de3b",
+        "ast_sha256": "1bb9aa1b63ac799d0104204c3eb078479bf337a4d24cd50a02220e72326db8b3"
+      },
+      {
+        "function": "reference_encoding",
+        "source": "scratch/analysis/astra_roberta_tokenizer_v1.py",
+        "source_sha256": "f9d326043c35782367a4a08048d1681a503076fcdc07d258664ba3c5a949de3b",
+        "ast_sha256": "e035978e5fee9c1d64c8b6073879e1fcc1a8fc33f5a84558109f917e5bbcad37"
+      },
+      {
+        "function": "check_encoding",
+        "source": "scratch/analysis/astra_roberta_tokenizer_v1.py",
+        "source_sha256": "f9d326043c35782367a4a08048d1681a503076fcdc07d258664ba3c5a949de3b",
+        "ast_sha256": "3e36a9070c4f128142bd287866fc1e49676d313791d8c11cd57f3e917681773f"
+      },
+      {
+        "function": "encode",
+        "source": "scratch/analysis/astra_roberta_tokenizer_v1.py",
+        "source_sha256": "f9d326043c35782367a4a08048d1681a503076fcdc07d258664ba3c5a949de3b",
+        "ast_sha256": "81b04d1ac661209479c25ffff714560861a022372f61cccc35db636de9477249"
+      },
+      {
+        "function": "check",
+        "source": "scratch/analysis/astra_roberta_tokenizer_v1.py",
+        "source_sha256": "f9d326043c35782367a4a08048d1681a503076fcdc07d258664ba3c5a949de3b",
+        "ast_sha256": "52c9dc15f9f41cb6439a5ab2132976299200e2c8e7312e5013a6fbdb12e9e591"
+      },
+      {
+        "function": "load",
+        "source": "scratch/analysis/astra_roberta_tokenizer_v1.py",
+        "source_sha256": "f9d326043c35782367a4a08048d1681a503076fcdc07d258664ba3c5a949de3b",
+        "ast_sha256": "60e6b864894af79c75020eacacdc0403ebefaee405aea7cd086f2a00be454d28"
+      }
+    ]
+  },
+  "reference_files": [
+    {
+      "path": "deploy/environment/requirements.in",
+      "original_sha256": "6ba46e8cc0795e9728adfd2901cb7eb1d53bc66c0c1c59d740dd2c47df963830"
+    },
+    {
+      "path": "deploy/environment/requirements.lock",
+      "original_sha256": "bdcc8d342f11352b2c0b56af880e8c43543c35fc72c4fd7fda09c6ef4287d712"
+    }
+  ]
+}

@@ -1,0 +1,148 @@
+{
+  "rag": {
+    "gate": {
+      "strict": {
+        "macro_f1": 0.0,
+        "mapping": "strict",
+        "per_class": {},
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 0,
+        "per_source": {},
+        "n_scored": 0,
+        "n_unscored": 0,
+        "n_uncertain": 0,
+        "macro_f1_confident_only": null,
+        "note": null
+      }
+    },
+    "target_group": {
+      "dimension": "target_group",
+      "macro_f1": null,
+      "micro_f1": 0.0,
+      "per_label": {},
+      "labels_averaged": [],
+      "labels_excluded": [],
+      "n_items": 0,
+      "n_unscored": 0,
+      "subset_accuracy": 0.0,
+      "hamming_loss": 0.0,
+      "extra": {}
+    },
+    "hate_type": {
+      "dimension": "hate_type",
+      "macro_f1": null,
+      "micro_f1": 0.0,
+      "per_label": {},
+      "labels_averaged": [],
+      "labels_excluded": [],
+      "n_items": 0,
+      "n_unscored": 0,
+      "subset_accuracy": 0.0,
+      "hamming_loss": 0.0,
+      "extra": {}
+    },
+    "legal": {
+      "dimension": "legal",
+      "macro_f1": 0.6054554482578979,
+      "micro_f1": 0.5955882352941176,
+      "per_label": {
+        "incitement_public_peace": {
+          "label": "incitement_public_peace",
+          "precision": 0.509090909090909,
+          "recall": 0.8235294117647058,
+          "f1": 0.6292134831460674,
+          "support": 34,
+          "predicted": 55,
+          "tp": 28,
+          "fp": 27,
+          "fn": 6,
+          "averaged": true
+        },
+        "insult_defamation": {
+          "label": "insult_defamation",
+          "precision": 0.3108108108108108,
+          "recall": 0.8518518518518519,
+          "f1": 0.4554455445544554,
+          "support": 27,
+          "predicted": 74,
+          "tp": 23,
+          "fp": 51,
+          "fn": 4,
+          "averaged": true
+        },
+        "propaganda": {
+          "label": "propaganda",
+          "precision": 0.6521739130434783,
+          "recall": 0.8333333333333334,
+          "f1": 0.7317073170731708,
+          "support": 36,
+          "predicted": 46,
+          "tp": 30,
+          "fp": 16,
+          "fn": 6,
+          "averaged": true
+        }
+      },
+      "labels_averaged": [
+        "incitement_public_peace",
+        "insult_defamation",
+        "propaganda"
+      ],
+      "labels_excluded": [],
+      "n_items": 175,
+      "n_unscored": 0,
+      "subset_accuracy": 0.4342857142857143,
+      "hamming_loss": 0.20952380952380953,
+      "extra": {
+        "mean_gold_labels": 0.5542857142857143,
+        "mean_pred_labels": 1.0,
+        "any_overlap_rate": 0.4,
+        "gold_subset_of_pred": 0.9142857142857143
+      }
+    },
+    "severity": {
+      "dimension": "severity",
+      "macro_f1": null,
+      "micro_f1": 0.0,
+      "per_label": {},
+      "labels_averaged": [],
+      "labels_excluded": [],
+      "n_items": 0,
+      "n_unscored": 0,
+      "subset_accuracy": 0.0,
+      "hamming_loss": 0.0,
+      "extra": {}
+    },
+    "calibration": {
+      "ece": null,
+      "bins": {},
+      "n": 0
+    },
+    "honesty": {
+      "n_items": 175,
+      "total_runs": 525,
+      "parse_failures": 11,
+      "parse_failure_rate": 0.02095238095238095,
+      "repairs": 98,
+      "normalisations": 0,
+      "gate_normalised": 4,
+      "uncertain": 2,
+      "no_prediction": 0,
+      "mean_latency_s": 11.334019047619048,
+      "workers": [
+        8
+      ],
+      "models": {
+        "Qwen/Qwen3-VL-32B-Instruct": 175
+      },
+      "kb_versions": [
+        "b3e1a021777f7b85"
+      ],
+      "prompt_versions": [
+        "classify_v1-8e588db7"
+      ]
+    }
+  }
+}

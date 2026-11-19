@@ -1,0 +1,26 @@
+source_label,unified_label,note
+African,race,
+Caucasian,race,
+Asian,race,
+Hispanic,race,
+Indigenous,race,
+Indian,race,national/ethnic - folded into race - FLAG
+Arab,race,ethnoreligious - folded into race - FLAG
+Islam,religion,
+Jewish,religion,also an ethnicity - folded into religion - FLAG
+Christian,religion,
+Hindu,religion,
+Buddhism,religion,
+Nonreligious,religion,targeted for absence of religion - still a religion-based attack
+Women,gender,
+Men,gender,
+Homosexual,sexual_orientation,
+Bisexual,sexual_orientation,
+Asexual,sexual_orientation,
+Heterosexual,sexual_orientation,
+Refugee,national_origin,
+Disability,disability,
+Economic,EXCLUDE,not a protected characteristic in our taxonomy
+Minority,EXCLUDE,too vague to map to a specific group
+Other,other,
+None,EXCLUDE,

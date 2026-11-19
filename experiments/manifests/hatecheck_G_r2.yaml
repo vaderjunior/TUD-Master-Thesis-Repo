@@ -1,0 +1,68 @@
+name: hatecheck_G_r2
+description: >
+  HATECHECK, GUIDELINES-ONLY ABLATION at 0/2/0. Replicate 2 of three.
+  Isolates the annotation-guideline record kind: no definitions, no retrieved
+  examples, guidelines at the frozen budget of 2.
+
+  THE ABLATION IS CLEAN, MEASURED NOT ASSUMED. hatecheck_probe_g against
+  hatecheck_probe: the guideline sets are identical on 3,728 of 3,728 items,
+  and the definition and example buckets are empty. Zeroing two buckets does
+  not reorder the third, so rag - guidelines_only differs only in what was
+  removed. Per-kind budget independence is now measured at n=3,728.
+
+  THIS ARM STAMPS arm: "rag", because the manipulation is a retrieval budget
+  rather than a prompt context. Same handling as kinds_* and defprop_*: the
+  source map is (stem, arm) pairs, not arm names. NOT at the frozen config and
+  MUST NOT be pooled with hatecheck_A_*.
+
+  ARMS MUST STAY [rag]. run_slice1 constructs Arms with k_examples read from
+  config.yaml while the Retriever gets the merged manifest config, so adding
+  few_shot here would give it 5 static examples under a manifest that says 0.
+  Known unfixed defect; avoided by construction.
+
+  PRE-REGISTERED.
+
+  H2. THE DIRECTIONAL DISTRACTOR. guide-threats-and-incitement is the only
+      decisive-TRUE rule in decisive_guidelines.yaml, and on gold-non-hateful
+      items it reaches 63.8% of definition_covered (81/127), 31.9% of
+      guideline_covered (221/693) and 22.3% of uncovered (77/345), 32.5%
+      overall (379/1,165). PREDICTION: guidelines_only - zero_shot is NEGATIVE
+      on the FP rate across all three non-hateful blocks, and MOST negative on
+      definition_covered, ordered by distractor rate. FALSIFIED by a positive
+      delta clearing its floor, or by definition_covered being the least
+      negative of the three.
+
+      Retrieving the wrong abstract material is worse than retrieving none.
+      That would be the third record kind showing one mechanism: SQ1's
+      definitions_only never above zero_shot, SQ3's oracle condition B below
+      baseline on a mismatched correction, and guidelines here.
+
+  H2b. On the 345 uncovered items no rule in the KB applies, yet two are
+      supplied on every item. Predicted negative, and this is the cleanest
+      distractor-injection test available because coverage is zero by
+      construction rather than by measurement.
+
+  H4-support. A null here is ambiguous between "the rule never arrived" (R1
+      says 16.3%) and "the rule arrived and was ignored". The oracle-guideline
+      conditions separate them; this manifest alone cannot.
+subset: en_hatecheck_eval
+arms: [rag]
+provider: peasec
+pinned_model: Qwen/Qwen3-VL-32B-Instruct
+temperature: 1.0
+allow_fallback: false
+n_votes: 3
+workers: 8
+gate_mapping: strict
+retrieval:
+  strategy: hybrid
+  k_definitions: 0
+  k_definitions_mode: flat
+  k_guidelines: 2
+  k_examples: 0
+  k_examples_feedback: 0
+  use_mmr: true
+  mmr_lambda: 0.7
+  mmr_pool_factor: 3
+  use_reranker: false
+  rrf_k: 60

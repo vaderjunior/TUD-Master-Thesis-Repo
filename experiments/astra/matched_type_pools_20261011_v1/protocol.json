@@ -1,0 +1,138 @@
+{
+  "annotation_budget": "67 type labels per pool, plus147 fixed gate annotations; union212-214 IDs. This is a type-head mechanism study, not a whole matched147-text deployment system.",
+  "endpoints": [
+    "core/en_dev_eval_sq3_types",
+    "core/en_dev_eval_types",
+    "broad/en_test/hate_type"
+  ],
+  "exposures": "Motivated by prior exposed results. TRAIN-only selection is fairer procedure development, not untouched TEST confirmation, a new algorithm, universal representation dominance or unbiased OOF performance.",
+  "folds": "Existing pool fold42; shared across frozen and neural methods. Preserve existing sparse/constant-label handling and no redraw.",
+  "gate": "One identical frozen original BGE gate, fold setting42, for all methods. Head-selection inputs overlapping its training groups use stored OOF gate probabilities; other inputs use its frozen final gate. No new gate labels or weights.",
+  "linear": "Existing balanced L2 logistic C=.1,1,10,100; global cutoff .1-.9; same folds and common gate. Reproduce existing BGE fold42 exactly before reusing it. Frozen RoBERTa mean pooling is fixed, no CLS winner search.",
+  "methods": [
+    "unchanged BGE linear fold42",
+    "frozen pretrained RoBERTa mean + matched balanced logistic",
+    "fine-tuned RoBERTa: fixed unweighted, fixed balanced, TRAIN-selected"
+  ],
+  "neural": {
+    "configurations": [
+      {
+        "epochs": 20,
+        "id": "l0_e20_u",
+        "learning_rate": 5e-06,
+        "loss": "unweighted"
+      },
+      {
+        "epochs": 20,
+        "id": "l0_e20_b",
+        "learning_rate": 5e-06,
+        "loss": "balanced"
+      },
+      {
+        "epochs": 60,
+        "id": "l0_e60_u",
+        "learning_rate": 5e-06,
+        "loss": "unweighted"
+      },
+      {
+        "epochs": 60,
+        "id": "l0_e60_b",
+        "learning_rate": 5e-06,
+        "loss": "balanced"
+      },
+      {
+        "epochs": 20,
+        "id": "l1_e20_u",
+        "learning_rate": 2e-05,
+        "loss": "unweighted"
+      },
+      {
+        "epochs": 20,
+        "id": "l1_e20_b",
+        "learning_rate": 2e-05,
+        "loss": "balanced"
+      },
+      {
+        "epochs": 60,
+        "id": "l1_e60_u",
+        "learning_rate": 2e-05,
+        "loss": "unweighted"
+      },
+      {
+        "epochs": 60,
+        "id": "l1_e60_b",
+        "learning_rate": 2e-05,
+        "loss": "balanced"
+      },
+      {
+        "epochs": 20,
+        "id": "l2_e20_u",
+        "learning_rate": 5e-05,
+        "loss": "unweighted"
+      },
+      {
+        "epochs": 20,
+        "id": "l2_e20_b",
+        "learning_rate": 5e-05,
+        "loss": "balanced"
+      },
+      {
+        "epochs": 60,
+        "id": "l2_e60_u",
+        "learning_rate": 5e-05,
+        "loss": "unweighted"
+      },
+      {
+        "epochs": 60,
+        "id": "l2_e60_b",
+        "learning_rate": 5e-05,
+        "loss": "balanced"
+      }
+    ],
+    "controls": "Fixed unweighted and fixed balanced l1_e20 recipes. Every family yields default and TRAIN-selected cutoffs on identical weights. Preserve all five final seeds.",
+    "cutoffs": [
+      0.1,
+      0.2,
+      0.3,
+      0.4,
+      0.5,
+      0.6,
+      0.7,
+      0.8,
+      0.9
+    ],
+    "final_seeds": [
+      10,
+      11,
+      12,
+      13,
+      14
+    ],
+    "search_seeds": [
+      0,
+      1,
+      2
+    ],
+    "selection": "Mean per-neural-seed OOF delivered macro-F1 using the common gate; deterministic inherited ties. Same full grid for every pool, supported labels >=2 positives/negatives."
+  },
+  "pools": [
+    "equal_type67_s101",
+    "equal_type67_s102",
+    "equal_type67_s103",
+    "equal_type67_s104",
+    "equal_type67_s105",
+    "balanced_type67_s111",
+    "balanced_type67_s112",
+    "balanced_type67_s113",
+    "balanced_type67_s114",
+    "balanced_type67_s115"
+  ],
+  "primary": "Four TEST contrasts: neural tuned-selected minus BGE and frozen-RoBERTa minus BGE, each averaged within equal67 and balanced67. Average neural seeds within pool then pools equally. 10000 paired whole-text-cluster draws shared across methods/pools;98.75% intervals conditional on fitted models and fixed pools.",
+  "remaining": "StageB nine same-total-text pools/all-head comparisons still to prepare, then full-English-data BGE and word/character TF-IDF. Neither is included or cancelled by this command.",
+  "representation": "Pinned original roberta-base, guarded historical max128 tokenizer; mean of nonpadding final hidden states including special tokens, L2 normalized, FP32 SDPA. Reuse checked evaluation features; extract only missing TRAIN identities.",
+  "resources": "1800 CV fits; up to150 final checkpoints (about70GiB). Require85GiB free before first scientific job and12GiB before later fits. No old files deleted. Technical pilots excluded.",
+  "resume": "Single local lock. Immutable receipts; verified fits skipped, incomplete fits restarted from pretrained weights with old attempt preserved. Prediction chunks verified/reused; orphan arrays compared to deterministic rerun. No Qwen.",
+  "stage": "A: type budgets only",
+  "study": "Matching methods across ten existing 67-type-annotation pools",
+  "supporting": "Every pool/seed, default/balanced controls, head-only F1, exact sets, label cardinality/precision/recall, ranking, gate suppression, learning curves and costs. Pool spread separate from initialization. Joint paired pool/text resampling is exploratory sensitivity with only5 draws/group, not extra independent test datasets."
+}

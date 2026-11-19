@@ -1,0 +1,35 @@
+name: lang_probe_hybrid
+description: >
+  CONTROL for the channel-provenance probe of sq1 §3.7. Mock only, zero API.
+  Retrieval is deterministic at a fixed item, KB, strategy and config, so this
+  run must reproduce de_dev_kbv3_r1's live guideline composition EXACTLY:
+  243 German and 57 English of 300 slots, 46 of 150 items with at least one
+  cross-lingual guideline, and 0 English examples of 750 slots.
+
+  PRE-REGISTERED: if it does not reproduce those figures, the dry-run path is
+  not identical to the live path and the dense and bm25 probes are NOT
+  interpretable. Report the mismatch rather than the decomposition.
+
+  arms is [rag] only, because Arms reads k_examples from config.yaml while the
+  Retriever gets the merged manifest config, so a few_shot arm under an
+  ablation manifest renders a budget the manifest does not specify.
+subset: de_dev_eval
+arms: [rag]
+provider: peasec
+pinned_model: Qwen/Qwen3-VL-32B-Instruct
+temperature: 1.0
+allow_fallback: false
+n_votes: 3
+workers: 8
+gate_mapping: strict
+retrieval:
+  strategy: hybrid
+  k_definitions: 2
+  k_guidelines: 2
+  k_examples: 5
+  k_examples_feedback: 0
+  use_mmr: true
+  mmr_lambda: 0.7
+  mmr_pool_factor: 3
+  use_reranker: false
+  rrf_k: 60

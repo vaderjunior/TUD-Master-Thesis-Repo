@@ -1,0 +1,27 @@
+name: hatecheck_AB_r3
+description: >
+  Replicate 3 of three. The pre-registration and the measured facts it rests
+  on are in hatecheck_AB_r1's description and are not repeated. Same subset,
+  same arm, same retrieval budget; only decoding varies, which is what makes
+  the spread across these three the floor.
+subset: en_hatecheck_eval
+arms: [rag]
+provider: peasec
+pinned_model: Qwen/Qwen3-VL-32B-Instruct
+temperature: 1.0
+allow_fallback: false
+n_votes: 3
+workers: 8
+gate_mapping: strict
+retrieval:
+  strategy: hybrid
+  k_definitions: 2
+  k_definitions_mode: flat
+  k_guidelines: 2
+  k_examples: 0
+  k_examples_feedback: 0
+  use_mmr: true
+  mmr_lambda: 0.7
+  mmr_pool_factor: 3
+  use_reranker: false
+  rrf_k: 60

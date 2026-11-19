@@ -1,0 +1,9 @@
+cff-version: 1.2.0
+message: "If you use this code, please cite this software and the accompanying thesis."
+type: software
+title: "Hate speech classification with editable retrieved knowledge"
+authors:
+  - family-names: "Jose"
+    given-names: "Ajay"
+version: "0.1.0"
+abstract: "Code for my master's thesis at TU Darmstadt / PEASEC, covering English and German classification, knowledge selection, feedback and supervised comparisons."

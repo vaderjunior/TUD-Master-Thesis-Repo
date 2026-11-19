@@ -1,0 +1,40 @@
+name: lang_probe_dense
+description: >
+  Channel provenance for sq1 §3.7, dense channel only. Mock only, zero API.
+  §3.7 measured 81.0% German guidelines for German queries against a 42.1%
+  pool share under hybrid fusion, and stated that the cause was not isolated.
+  This separates the channels.
+
+  PRE-REGISTERED PREDICTION, frozen before the run: BM25 cannot lexically
+  match German query tokens against English guideline text, so the
+  same-language preference is expected to be substantially WEAKER under dense
+  alone. The German share of guideline slots will fall below 81.0% and move
+  toward the 42.1% pool share.
+
+  FALSIFIED IF the dense German share is at or above 81.0%. That outcome
+  would place the preference in the BGE-M3 embedding rather than in BM25, and
+  would contradict test_german_gets_english_knowledge_cross_lingually's
+  premise that the cross-lingual direction is available.
+
+  Not at the frozen config: strategy differs. Must not be pooled with
+  de_dev_kbv3_*.
+subset: de_dev_eval
+arms: [rag]
+provider: peasec
+pinned_model: Qwen/Qwen3-VL-32B-Instruct
+temperature: 1.0
+allow_fallback: false
+n_votes: 3
+workers: 8
+gate_mapping: strict
+retrieval:
+  strategy: dense
+  k_definitions: 2
+  k_guidelines: 2
+  k_examples: 5
+  k_examples_feedback: 0
+  use_mmr: true
+  mmr_lambda: 0.7
+  mmr_pool_factor: 3
+  use_reranker: false
+  rrf_k: 60

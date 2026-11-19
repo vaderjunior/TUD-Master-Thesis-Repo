@@ -1,0 +1,99 @@
+{
+  "analysis_scope": "One late SQ1 architectural supplement, not a new tuned main configuration or fresh independent test. Existing three-condition design is not a factorial or equal-token experiment.",
+  "artifacts": {
+    "budget.json": "98136831b1f0719dcc47e9a78295b721b7d7bf690182f9e53e1b2ab8b1893bc1",
+    "comparison_registry.json": "02c95846e4e75abf4e349516a4ed03d3c131727d8731a76083f31ba228ca185b",
+    "endpoints.json": "32a1c8d785ad17d32533d391ea58476247a05c9585c63115c3444ddfc82a8309",
+    "policy_inventory.json": "e0b763fd5350402bf0c5b201b5d74b83c5c68f235d2143e4d454ea8bc919b357",
+    "prompt_bindings.jsonl": "dda924fa44def4fdb4f94dff0df773c8104aedb627da83d9523f1cc11cc6d809",
+    "roster.jsonl": "3ef2167979bb38f9ac1d32cd96d82e5075cef171f0643c7d1ee222618df8a667",
+    "roster_summary.json": "2ceaeacd741a8e0dc130755e9fef679d3251ce13a9f8cc16c8f9a275223aad84",
+    "sensitivity_rosters.json": "b7569affeaa96cf8016d91eb3167f153c4038ae4f341cadc011f027ca36e6a3c"
+  },
+  "candidate": "en2400_de1500_all_fine",
+  "conditions": [
+    {
+      "definitions": 2,
+      "examples": 5,
+      "guidelines": 2,
+      "id": "retrieved_policy"
+    },
+    {
+      "definitions": 21,
+      "examples": 5,
+      "guidelines": 2,
+      "id": "complete_definitions"
+    },
+    {
+      "definitions": 21,
+      "examples": 5,
+      "guidelines": 19,
+      "id": "complete_policy"
+    }
+  ],
+  "deferred_to_part2": [
+    "Executable prompt matrix and ground-truth-free job table",
+    "128-worker interleaving and single-queue enforcement tests",
+    "Parser/vote/repair replay tests",
+    "Unknown-response recovery and bounded transport tests",
+    "Deadline/long-path/resource/PowerShell checks",
+    "Actual deployment model and context compatibility on user launch"
+  ],
+  "execution_design": {
+    "completion": "All 9N prediction receipts plus item and batch replay audits; no automatic subsequent study.",
+    "deadline_local": "2026-11-15T23:59:59+01:00",
+    "group_size_inputs": 150,
+    "interleaving": "SHA256(seed|schedule|key) query order. All nine condition/repeat jobs together per key with cyclic rotation by key position. Fresh output for every job.",
+    "latest_new_launch_local": "2026-11-15T05:59:59+01:00",
+    "max_predictions_per_batch": 1350,
+    "no_quality_stopping": true,
+    "repair_context": "Check complete repair-message tokens before every transport request; stop without truncation on overflow.",
+    "resume": "Use saved intent/outcome state, locks and bounded retry history. Unknown outcomes stop for review; no blind resend."
+  },
+  "frozen_utc": "2026-11-14T10:14:52.788513+00:00",
+  "inner_votes": 3,
+  "model_contract": {
+    "allow_fallback": false,
+    "backoff_seconds": [
+      2,
+      2,
+      4,
+      8
+    ],
+    "max_repairs": 2,
+    "max_tokens": 4096,
+    "max_transport_attempts": 5,
+    "model": "Qwen/Qwen3-VL-32B-Instruct",
+    "temperature": 1.0,
+    "timeout_seconds": 180,
+    "votes": 3
+  },
+  "new_reference": true,
+  "outer_repeats": [
+    0,
+    1,
+    2
+  ],
+  "policy_languages": {
+    "definitions": {
+      "en": 21
+    },
+    "guidelines": {
+      "de": 8,
+      "en": 11
+    }
+  },
+  "policy_order": "Original bank index order for complete blocks; original retrieved order in unchanged blocks.",
+  "prompt_sources": "Original full-bank saved prompts. No new retrieval, gold-conditioned policy selection, translation or content edit.",
+  "query_languages": [
+    "en",
+    "de"
+  ],
+  "sampling": "Largest-remainder source x gold-hate proportional quota, SHA256(seed|key) order. All eligible EN fine fields and DE legal retained. Separate endpoint denominators.",
+  "selection_seed": "complete-policy-20261114-v1",
+  "single_queue": true,
+  "source_bindings_sha256": "1504ee2e892a8d4ddda05e239ce1e0f5b5eca099a25e9ad045939e0e24551d6f",
+  "status": "PART_1_DESIGN_ONLY_NO_EXECUTION",
+  "version": 1,
+  "workers": 128
+}

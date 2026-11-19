@@ -1,0 +1,254 @@
+[
+  {
+    "epochs": 1,
+    "id": "l0_e1_u",
+    "learning_rate": 5e-06,
+    "loss": "unweighted"
+  },
+  {
+    "epochs": 1,
+    "id": "l0_e1_b",
+    "learning_rate": 5e-06,
+    "loss": "balanced"
+  },
+  {
+    "epochs": 2,
+    "id": "l0_e2_u",
+    "learning_rate": 5e-06,
+    "loss": "unweighted"
+  },
+  {
+    "epochs": 2,
+    "id": "l0_e2_b",
+    "learning_rate": 5e-06,
+    "loss": "balanced"
+  },
+  {
+    "epochs": 5,
+    "id": "l0_e5_u",
+    "learning_rate": 5e-06,
+    "loss": "unweighted"
+  },
+  {
+    "epochs": 5,
+    "id": "l0_e5_b",
+    "learning_rate": 5e-06,
+    "loss": "balanced"
+  },
+  {
+    "epochs": 10,
+    "id": "l0_e10_u",
+    "learning_rate": 5e-06,
+    "loss": "unweighted"
+  },
+  {
+    "epochs": 10,
+    "id": "l0_e10_b",
+    "learning_rate": 5e-06,
+    "loss": "balanced"
+  },
+  {
+    "epochs": 15,
+    "id": "l0_e15_u",
+    "learning_rate": 5e-06,
+    "loss": "unweighted"
+  },
+  {
+    "epochs": 15,
+    "id": "l0_e15_b",
+    "learning_rate": 5e-06,
+    "loss": "balanced"
+  },
+  {
+    "epochs": 20,
+    "id": "l0_e20_u",
+    "learning_rate": 5e-06,
+    "loss": "unweighted"
+  },
+  {
+    "epochs": 20,
+    "id": "l0_e20_b",
+    "learning_rate": 5e-06,
+    "loss": "balanced"
+  },
+  {
+    "epochs": 60,
+    "id": "l0_e60_u",
+    "learning_rate": 5e-06,
+    "loss": "unweighted"
+  },
+  {
+    "epochs": 60,
+    "id": "l0_e60_b",
+    "learning_rate": 5e-06,
+    "loss": "balanced"
+  },
+  {
+    "epochs": 1,
+    "id": "l1_e1_u",
+    "learning_rate": 2e-05,
+    "loss": "unweighted"
+  },
+  {
+    "epochs": 1,
+    "id": "l1_e1_b",
+    "learning_rate": 2e-05,
+    "loss": "balanced"
+  },
+  {
+    "epochs": 2,
+    "id": "l1_e2_u",
+    "learning_rate": 2e-05,
+    "loss": "unweighted"
+  },
+  {
+    "epochs": 2,
+    "id": "l1_e2_b",
+    "learning_rate": 2e-05,
+    "loss": "balanced"
+  },
+  {
+    "epochs": 5,
+    "id": "l1_e5_u",
+    "learning_rate": 2e-05,
+    "loss": "unweighted"
+  },
+  {
+    "epochs": 5,
+    "id": "l1_e5_b",
+    "learning_rate": 2e-05,
+    "loss": "balanced"
+  },
+  {
+    "epochs": 10,
+    "id": "l1_e10_u",
+    "learning_rate": 2e-05,
+    "loss": "unweighted"
+  },
+  {
+    "epochs": 10,
+    "id": "l1_e10_b",
+    "learning_rate": 2e-05,
+    "loss": "balanced"
+  },
+  {
+    "epochs": 15,
+    "id": "l1_e15_u",
+    "learning_rate": 2e-05,
+    "loss": "unweighted"
+  },
+  {
+    "epochs": 15,
+    "id": "l1_e15_b",
+    "learning_rate": 2e-05,
+    "loss": "balanced"
+  },
+  {
+    "epochs": 20,
+    "id": "l1_e20_u",
+    "learning_rate": 2e-05,
+    "loss": "unweighted"
+  },
+  {
+    "epochs": 20,
+    "id": "l1_e20_b",
+    "learning_rate": 2e-05,
+    "loss": "balanced"
+  },
+  {
+    "epochs": 60,
+    "id": "l1_e60_u",
+    "learning_rate": 2e-05,
+    "loss": "unweighted"
+  },
+  {
+    "epochs": 60,
+    "id": "l1_e60_b",
+    "learning_rate": 2e-05,
+    "loss": "balanced"
+  },
+  {
+    "epochs": 1,
+    "id": "l2_e1_u",
+    "learning_rate": 5e-05,
+    "loss": "unweighted"
+  },
+  {
+    "epochs": 1,
+    "id": "l2_e1_b",
+    "learning_rate": 5e-05,
+    "loss": "balanced"
+  },
+  {
+    "epochs": 2,
+    "id": "l2_e2_u",
+    "learning_rate": 5e-05,
+    "loss": "unweighted"
+  },
+  {
+    "epochs": 2,
+    "id": "l2_e2_b",
+    "learning_rate": 5e-05,
+    "loss": "balanced"
+  },
+  {
+    "epochs": 5,
+    "id": "l2_e5_u",
+    "learning_rate": 5e-05,
+    "loss": "unweighted"
+  },
+  {
+    "epochs": 5,
+    "id": "l2_e5_b",
+    "learning_rate": 5e-05,
+    "loss": "balanced"
+  },
+  {
+    "epochs": 10,
+    "id": "l2_e10_u",
+    "learning_rate": 5e-05,
+    "loss": "unweighted"
+  },
+  {
+    "epochs": 10,
+    "id": "l2_e10_b",
+    "learning_rate": 5e-05,
+    "loss": "balanced"
+  },
+  {
+    "epochs": 15,
+    "id": "l2_e15_u",
+    "learning_rate": 5e-05,
+    "loss": "unweighted"
+  },
+  {
+    "epochs": 15,
+    "id": "l2_e15_b",
+    "learning_rate": 5e-05,
+    "loss": "balanced"
+  },
+  {
+    "epochs": 20,
+    "id": "l2_e20_u",
+    "learning_rate": 5e-05,
+    "loss": "unweighted"
+  },
+  {
+    "epochs": 20,
+    "id": "l2_e20_b",
+    "learning_rate": 5e-05,
+    "loss": "balanced"
+  },
+  {
+    "epochs": 60,
+    "id": "l2_e60_u",
+    "learning_rate": 5e-05,
+    "loss": "unweighted"
+  },
+  {
+    "epochs": 60,
+    "id": "l2_e60_b",
+    "learning_rate": 5e-05,
+    "loss": "balanced"
+  }
+]

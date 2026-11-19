@@ -1,0 +1,245 @@
+{
+  "rag": {
+    "gate": {
+      "strict": {
+        "macro_f1": 0.9185303784790306,
+        "mapping": "strict",
+        "per_class": {
+          "hate": {
+            "precision": 0.9191736136281261,
+            "recall": 0.9902381882077314,
+            "f1": 0.9533834586466166,
+            "tp": 2536,
+            "fp": 223,
+            "fn": 25
+          },
+          "not_hate": {
+            "precision": 0.9741468459152016,
+            "recall": 0.8085836909871245,
+            "f1": 0.8836772983114447,
+            "tp": 942,
+            "fp": 25,
+            "fn": 223
+          }
+        },
+        "tp": 2536,
+        "fp": 223,
+        "fn": 25,
+        "tn": 942,
+        "per_source": {
+          "hatecheck": {
+            "n": 3726,
+            "benign": 1165,
+            "hateful": 2561,
+            "fp": 223,
+            "fn": 25,
+            "fp_rate": 0.19141630901287554,
+            "fn_rate": 0.009761811792268645
+          }
+        },
+        "n_scored": 3726,
+        "n_unscored": 2,
+        "n_uncertain": 6,
+        "macro_f1_confident_only": 0.9189068194055081,
+        "note": null
+      }
+    },
+    "target_group": {
+      "dimension": "target_group",
+      "macro_f1": 0.9311945164550627,
+      "micro_f1": 0.9264842732179416,
+      "per_label": {
+        "disability": {
+          "label": "disability",
+          "precision": 1.0,
+          "recall": 0.956989247311828,
+          "f1": 0.978021978021978,
+          "support": 372,
+          "predicted": 356,
+          "tp": 356,
+          "fp": 0,
+          "fn": 16,
+          "averaged": true
+        },
+        "gender": {
+          "label": "gender",
+          "precision": 0.9928366762177651,
+          "recall": 0.9493150684931507,
+          "f1": 0.9705882352941176,
+          "support": 730,
+          "predicted": 698,
+          "tp": 693,
+          "fp": 5,
+          "fn": 37,
+          "averaged": true
+        },
+        "national_origin": {
+          "label": "national_origin",
+          "precision": 0.9293193717277487,
+          "recall": 0.9943977591036415,
+          "f1": 0.9607577807848444,
+          "support": 357,
+          "predicted": 382,
+          "tp": 355,
+          "fp": 27,
+          "fn": 2,
+          "averaged": true
+        },
+        "other": {
+          "label": "other",
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 0,
+          "predicted": 8,
+          "tp": 0,
+          "fp": 8,
+          "fn": 0,
+          "averaged": false
+        },
+        "race": {
+          "label": "race",
+          "precision": 0.8964646464646465,
+          "recall": 0.9943977591036415,
+          "f1": 0.9428950863213812,
+          "support": 357,
+          "predicted": 396,
+          "tp": 355,
+          "fp": 41,
+          "fn": 2,
+          "averaged": true
+        },
+        "religion": {
+          "label": "religion",
+          "precision": 1.0,
+          "recall": 0.9812332439678284,
+          "f1": 0.9905277401894452,
+          "support": 373,
+          "predicted": 366,
+          "tp": 366,
+          "fp": 0,
+          "fn": 7,
+          "averaged": true
+        },
+        "sexual_orientation": {
+          "label": "sexual_orientation",
+          "precision": 0.6006600660066007,
+          "recall": 0.978494623655914,
+          "f1": 0.7443762781186095,
+          "support": 372,
+          "predicted": 606,
+          "tp": 364,
+          "fp": 242,
+          "fn": 8,
+          "averaged": true
+        }
+      },
+      "labels_averaged": [
+        "disability",
+        "gender",
+        "national_origin",
+        "race",
+        "religion",
+        "sexual_orientation"
+      ],
+      "labels_excluded": [
+        "other"
+      ],
+      "n_items": 2561,
+      "n_unscored": 2,
+      "subset_accuracy": 0.8672393596251464,
+      "hamming_loss": 0.022033803759692085,
+      "extra": {
+        "mean_gold_labels": 1.0,
+        "mean_pred_labels": 1.0980085903943773,
+        "any_overlap_rate": 0.9718859820382663,
+        "gold_subset_of_pred": 0.9718859820382663
+      }
+    },
+    "hate_type": {
+      "dimension": "hate_type",
+      "macro_f1": null,
+      "micro_f1": 0.0,
+      "per_label": {},
+      "labels_averaged": [],
+      "labels_excluded": [],
+      "n_items": 0,
+      "n_unscored": 0,
+      "subset_accuracy": 0.0,
+      "hamming_loss": 0.0,
+      "extra": {}
+    },
+    "legal": {
+      "dimension": "legal",
+      "macro_f1": null,
+      "micro_f1": 0.0,
+      "per_label": {},
+      "labels_averaged": [],
+      "labels_excluded": [],
+      "n_items": 0,
+      "n_unscored": 0,
+      "subset_accuracy": 0.0,
+      "hamming_loss": 0.0,
+      "extra": {}
+    },
+    "severity": {
+      "dimension": "severity",
+      "macro_f1": null,
+      "micro_f1": 0.0,
+      "per_label": {},
+      "labels_averaged": [],
+      "labels_excluded": [],
+      "n_items": 0,
+      "n_unscored": 0,
+      "subset_accuracy": 0.0,
+      "hamming_loss": 0.0,
+      "extra": {}
+    },
+    "calibration": {
+      "ece": 0.053153247450348905,
+      "bins": {
+        "0.5": {
+          "n": 6,
+          "accuracy": 0.6666666666666666,
+          "confidence": 0.5
+        },
+        "0.667": {
+          "n": 147,
+          "accuracy": 0.54421768707483,
+          "confidence": 0.667
+        },
+        "1.0": {
+          "n": 3573,
+          "accuracy": 0.9499020431010355,
+          "confidence": 1.0
+        }
+      },
+      "n": 3726,
+      "note": "vote share proxy; n_votes=3 gives 2-3 distinct values"
+    },
+    "honesty": {
+      "n_items": 3728,
+      "total_runs": 11184,
+      "parse_failures": 84,
+      "parse_failure_rate": 0.0075107296137339056,
+      "repairs": 572,
+      "normalisations": 0,
+      "gate_normalised": 2,
+      "uncertain": 6,
+      "no_prediction": 2,
+      "mean_latency_s": 7.351396638054363,
+      "workers": [
+        8
+      ],
+      "models": {
+        "Qwen/Qwen3-VL-32B-Instruct": 3728
+      },
+      "kb_versions": [
+        "b3e1a021777f7b85"
+      ],
+      "prompt_versions": [
+        "classify_v1-8e588db7"
+      ]
+    }
+  }
+}

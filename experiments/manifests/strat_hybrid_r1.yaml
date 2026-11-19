@@ -1,0 +1,64 @@
+name: strat_hybrid_r1
+description: >
+  SQ1 STAGE B, RETRIEVAL STRATEGY AT CLASSIFICATION LEVEL. Replicate 1 of
+  three. hybrid arm.MMR is dense-channel only, so this arm runs without it by 
+  construction; that is a property of the strategy, not an unmatched control
+
+  WHY THIS RUNS. SQ1 as registered asks how different representation AND
+  retrieval strategies compare. Representation was answered on 2026-08-23.
+  Strategy has never been measured at classification level: the only evidence
+  is six hand-written probes at a retired KB, and that entry's own verdict is
+  that no strategy claim can be made from it. It is the largest named hole in
+  a registered sub-question.
+
+  AN ABLATION, NOT A CONFIGURATION DECISION. The config stays frozen at hybrid
+  whatever this returns. Every test subset is spent, so no configuration change
+  could be validated even if one were indicated.
+
+  RUN FRESH RATHER THAN REUSING sq3_round0_r1..r4. Those four hybrid runs are
+  comparable on the config: their retrieval_config carries no key this one
+  lacks, every shared value is identical, and the four keys they lack are inert
+  at their values here (flat returns the single pre-2026-08-16 definition spec;
+  the two per_* keys are read only when mode is not flat; a zero feedback
+  budget skips the bucket). Reuse was defensible. Rejected anyway for two
+  reasons unrelated to config: four replicates against three gives one arm a
+  different floor basis, and they carry a different code_version, which is
+  precisely the configuration that produced the legal_dev_peasec mixed-code
+  bug where every stamp matched and the code did not. Cost of running fresh:
+  1.4 hours. The four existing runs become a free code-version stability check.
+
+  PRE-REGISTERED, and S1 and S3 are in tension deliberately.
+
+  S1. dense >= hybrid on hate_type macro-F1, because BM25 controls the
+      definitions bucket under RRF (sq1_log 3.2, 3.3) and BM25 on definitions
+      is anti-correlated with relevance.
+  S2. bm25 is worst of the three.
+  S3. all three deltas sit INSIDE the floor, because SQ1 5 showed the
+      definitions and guidelines buckets contribute nothing on this dimension,
+      so changing how they are retrieved should change nothing.
+  If S1 clears and S3 fails, the retrieval channel matters after all and SQ1
+  5's conclusion narrows. A prediction that cannot fail carries no information.
+
+  Floor = the widest arm's spread across the three replicates of that arm.
+  Paired bootstrap over items runs beside it; a claim needs both.
+subset: en_dev_eval_sq3_types
+arms: [rag]
+provider: peasec
+pinned_model: Qwen/Qwen3-VL-32B-Instruct
+temperature: 1.0
+allow_fallback: false
+n_votes: 3
+workers: 8
+gate_mapping: strict
+retrieval:
+  strategy: hybrid
+  k_definitions: 2
+  k_definitions_mode: flat
+  k_guidelines: 2
+  k_examples: 5
+  k_examples_feedback: 0
+  use_mmr: true
+  mmr_lambda: 0.7
+  mmr_pool_factor: 3
+  use_reranker: false
+  rrf_k: 60

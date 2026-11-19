@@ -1,0 +1,28 @@
+[
+  {
+    "id": "01_transfer_and_rounds",
+    "inference": "Original four-primary families, separate panels; no new intervals.",
+    "rows": [
+      "broad_en_test_FPR",
+      "broad_en_test_FNR",
+      "broad_en_hatecheck_eval_FPR",
+      "broad_en_hatecheck_eval_FNR",
+      "primary_en_test_FPR_adaptive-static",
+      "primary_en_test_FNR_adaptive-static",
+      "primary_en_test_FPR_adaptive-random",
+      "primary_en_test_FNR_adaptive-random"
+    ],
+    "source": "display_values.json"
+  },
+  {
+    "id": "02_classifier_absolute",
+    "inference": "Descriptive absolute means; no uncertainty or significance added.",
+    "rows": [
+      "cumulative_en_test_FPR",
+      "cumulative_en_test_FNR",
+      "cumulative_en_hatecheck_eval_FPR",
+      "cumulative_en_hatecheck_eval_FNR"
+    ],
+    "source": "display_values.json"
+  }
+]
